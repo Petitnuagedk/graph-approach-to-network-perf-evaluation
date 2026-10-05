@@ -1,0 +1,8 @@
+{
+  "entry_name": "/home/hledirach/Documents/J2/Graph/dynamic_frames",
+  "frames": 60,
+  "nodes_file": "nodes.txt",
+  "frames_file": "frames.csv",
+  "format": "csv",
+  "entry_dir": "dynamic_frames"
+}

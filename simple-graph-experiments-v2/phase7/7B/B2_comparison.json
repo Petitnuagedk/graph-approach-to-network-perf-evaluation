@@ -1,0 +1,115 @@
+{
+  "b2_pass": true,
+  "deterministic_files": [
+    {
+      "after_sha256": "98ba9eb1ee6e15ec9e60bdc023e8ba57cbd052c9f5ef61e5adaf13aabaf5a06e",
+      "before_sha256": "98ba9eb1ee6e15ec9e60bdc023e8ba57cbd052c9f5ef61e5adaf13aabaf5a06e",
+      "byte_identical": true,
+      "file": "packets_olsr.csv"
+    },
+    {
+      "after_sha256": "ed5bac31da78cf55feef57a6c3ca3b259e05f996a4f80b214f3d11f5a637662d",
+      "before_sha256": "ed5bac31da78cf55feef57a6c3ca3b259e05f996a4f80b214f3d11f5a637662d",
+      "byte_identical": true,
+      "file": "routes_olsr.txt"
+    },
+    {
+      "after_sha256": "2e0e7999f477658f0c8aab12a921d6cf0d1ada23eb545044bc4e5fa062690e3b",
+      "before_sha256": "2e0e7999f477658f0c8aab12a921d6cf0d1ada23eb545044bc4e5fa062690e3b",
+      "byte_identical": true,
+      "file": "times_olsr.csv"
+    },
+    {
+      "after_sha256": "45d86af51a8e2822065570a18496321bf367670e6e97062c50c7aee6b31d6487",
+      "before_sha256": "45d86af51a8e2822065570a18496321bf367670e6e97062c50c7aee6b31d6487",
+      "byte_identical": true,
+      "file": "oracle_diagnostics_olsr.csv"
+    },
+    {
+      "after_sha256": "fab464ce69fde3ec95ffab57b5240c014e5ad3bca49e65b8e1c60eac755a0a89",
+      "before_sha256": "fab464ce69fde3ec95ffab57b5240c014e5ad3bca49e65b8e1c60eac755a0a89",
+      "byte_identical": true,
+      "file": "packet_diagnostics_olsr.csv"
+    },
+    {
+      "after_sha256": "f48896f1fbc82e7b268e8c4e211fde0c4448af959ab627e8934c87395508ea6a",
+      "before_sha256": "f48896f1fbc82e7b268e8c4e211fde0c4448af959ab627e8934c87395508ea6a",
+      "byte_identical": true,
+      "file": "packets_aodv.csv"
+    },
+    {
+      "after_sha256": "168ba5094277537f8e8c3cdedd582de12ebf2ea2e83362f3ddb09f663ef6899f",
+      "before_sha256": "168ba5094277537f8e8c3cdedd582de12ebf2ea2e83362f3ddb09f663ef6899f",
+      "byte_identical": true,
+      "file": "routes_aodv.txt"
+    },
+    {
+      "after_sha256": "37b522b998273db66d3b8406a7b846dfba19c8dc62f5fae2530f85d3f6273401",
+      "before_sha256": "37b522b998273db66d3b8406a7b846dfba19c8dc62f5fae2530f85d3f6273401",
+      "byte_identical": true,
+      "file": "times_aodv.csv"
+    },
+    {
+      "after_sha256": "45d86af51a8e2822065570a18496321bf367670e6e97062c50c7aee6b31d6487",
+      "before_sha256": "45d86af51a8e2822065570a18496321bf367670e6e97062c50c7aee6b31d6487",
+      "byte_identical": true,
+      "file": "oracle_diagnostics_aodv.csv"
+    },
+    {
+      "after_sha256": "7e8cbe10c75f3f42cd66e8828f8b6dc680fef7f7b4307bb59376e2c4ad8c20ce",
+      "before_sha256": "7e8cbe10c75f3f42cd66e8828f8b6dc680fef7f7b4307bb59376e2c4ad8c20ce",
+      "byte_identical": true,
+      "file": "packet_diagnostics_aodv.csv"
+    },
+    {
+      "after_sha256": "35a7c5c2eb0406adaa204460b2a7df8a92d5ce4d669fc9fd8bd86b763bb893da",
+      "before_sha256": "35a7c5c2eb0406adaa204460b2a7df8a92d5ce4d669fc9fd8bd86b763bb893da",
+      "byte_identical": true,
+      "file": "packets_static.csv"
+    },
+    {
+      "after_sha256": "df1d8dbf9e3f78493e6cdc671563bbb5ffea1069ebdf1c4eb358a14ce5c26a37",
+      "before_sha256": "df1d8dbf9e3f78493e6cdc671563bbb5ffea1069ebdf1c4eb358a14ce5c26a37",
+      "byte_identical": true,
+      "file": "routes_static.txt"
+    },
+    {
+      "after_sha256": "f4d153ac29ce6f4ac1787f342f4e925cf65f1cb6fdee88c88d67037ef5952e5a",
+      "before_sha256": "f4d153ac29ce6f4ac1787f342f4e925cf65f1cb6fdee88c88d67037ef5952e5a",
+      "byte_identical": true,
+      "file": "times_static.csv"
+    },
+    {
+      "after_sha256": "45d86af51a8e2822065570a18496321bf367670e6e97062c50c7aee6b31d6487",
+      "before_sha256": "45d86af51a8e2822065570a18496321bf367670e6e97062c50c7aee6b31d6487",
+      "byte_identical": true,
+      "file": "oracle_diagnostics_static.csv"
+    },
+    {
+      "after_sha256": "a2ff6bd56df7cc57bfe24c77d891e53271a5d7d20fbed0c493d407076a575fe6",
+      "before_sha256": "a2ff6bd56df7cc57bfe24c77d891e53271a5d7d20fbed0c493d407076a575fe6",
+      "byte_identical": true,
+      "file": "packet_diagnostics_static.csv"
+    }
+  ],
+  "frame_warmup_accounting_pass": true,
+  "gate": "B2 legacy deterministic regression",
+  "invocations": 1,
+  "legacy_interpolation_true": true,
+  "mismatches": [],
+  "protocol_variants": 3,
+  "result_csv_identical_excluding_only_wall_cpu_time": true,
+  "run_args_identical_except_out_dir": true,
+  "source_hash_changes_expected_due_to_post_change_build": true,
+  "source_hashes_before_after": {
+    "after_graph_run_cc": "5cd8dfd97aec19b7be5373a6573290cf6c47736e9e516cdf894684e485a7e90f",
+    "before": {
+      "frames_csv": "282feae63d0822c096bc427b9e7fc8705447509d352a72a78761805acd81f603",
+      "graph_run_cc": "3d36bad0470375e3055ece09a36ad829ad709e5adf2b51cb50a261366603b5c3",
+      "pipeline": "c3bcf2f1af4e4dcb35658a4f851b9af1a462cba69ecf2f3a52cfebd078214720"
+    }
+  },
+  "stable_config_settings_identical": true,
+  "trace_sha256": "282feae63d0822c096bc427b9e7fc8705447509d352a72a78761805acd81f603",
+  "trace_sha256_match": true
+}

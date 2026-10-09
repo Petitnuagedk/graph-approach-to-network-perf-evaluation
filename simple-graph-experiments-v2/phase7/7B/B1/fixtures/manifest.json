@@ -1,0 +1,48 @@
+{
+  "all_up_line_edges": [
+    [
+      "A2",
+      "A1"
+    ],
+    [
+      "S",
+      "A1"
+    ],
+    [
+      "A2",
+      "A3"
+    ],
+    [
+      "A3",
+      "R"
+    ]
+  ],
+  "fixtures": {
+    "all_up_ladder_60.csv": {
+      "fps_for_replay": 1.0,
+      "node_count": 8,
+      "sha256": "596b75374572aed3f25bc5a593de152c10215832ffafa9bb53698ba90d4280ef",
+      "source_frame_matrices": 60,
+      "source_phase1_ladder_sha256": "596b75374572aed3f25bc5a593de152c10215832ffafa9bb53698ba90d4280ef",
+      "source_phase1_path": "simple-graph-experiments-v2/phase1/traces/static_ladder.csv",
+      "warmup_s": 0.0
+    },
+    "all_up_line_60.csv": {
+      "fps_for_replay": 1.0,
+      "node_count": 5,
+      "sha256": "afd95beb0d2f7090fd6ed9e1cdbe2e56aff59cbdf6dd751f1f21cb614b490e49",
+      "source_frame_matrices": 60,
+      "warmup_s": 0.0
+    },
+    "alternating_sr_60.csv": {
+      "fps_for_replay": 1.0,
+      "node_count": 2,
+      "sha256": "84a8aa27a1ce91e08d9f4dd5949b7785dbb109198ec4cdc6054a22d612384886",
+      "source_frame_matrices": 60,
+      "warmup_s": 0.0
+    }
+  },
+  "protocol_variants": 0,
+  "purpose": "Phase 7B B1 frozen inputs",
+  "synthetic_schedule": "30 repetitions: frame 0 up, frame 1 down, alternating"
+}

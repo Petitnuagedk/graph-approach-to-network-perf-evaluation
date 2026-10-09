@@ -1,0 +1,8 @@
+{
+  "entry_name": "/home/hledirach/Documents/J2/simple-graph-experiments-v2/phase4/rho_fps_1p0/dynamic_frames/graph_0001",
+  "frames": 60,
+  "nodes_file": "nodes.txt",
+  "frames_file": "frames.csv",
+  "format": "csv",
+  "entry_dir": "graph_0001"
+}

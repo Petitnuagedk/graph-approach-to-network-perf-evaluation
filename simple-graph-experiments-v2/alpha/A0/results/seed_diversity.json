@@ -1,0 +1,20 @@
+{
+  "condition": {
+    "N": 92,
+    "frames": 120,
+    "path_life": 0.5,
+    "seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ]
+  },
+  "mean_pairwise_hamming_fraction": 0.0,
+  "pairwise_comparisons": 10,
+  "passed": false,
+  "required_mean_hamming_strictly_greater_than": 0.1,
+  "required_unique": 5,
+  "unique_s_r_bit_timelines": 1
+}

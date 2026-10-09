@@ -1,0 +1,33 @@
+{
+  "all_rows_nonempty_pools": true,
+  "diversity": {
+    "mean_pairwise_hamming_fraction": 0.5366666666666666,
+    "pass": true,
+    "unique_s_r_timelines": 5
+  },
+  "fidelity": {
+    "all_15_exact_requested_quota": true,
+    "all_15_exact_up_run_target": true,
+    "every_error_at_most_0_05": true,
+    "max_absolute_uptime_error": 0.0
+  },
+  "mpc_regression": {
+    "byte_identical_clean_vs_patched": true,
+    "clean_source_method_unchanged": true,
+    "fixture": "generateMPCFrames; N=9; pairs=(N0,N8),(N1,N7); trials=200; p_edge=0.5; seed=971",
+    "signature_sha256": "de6394c29c6279793159041a352412e4ee0a99684bf24d347880643880f104e3",
+    "status_patterns": 3
+  },
+  "patched_source_hashes": {
+    "dynaGraph.py": "8e75cb59139516bfcc6ccfe672281575c4e8490fdf03d5d5bbcbef8a8b203c42",
+    "frameGenerator.py": "e84971f89cb966a574bf447ce8135c0c241b407be14e5066db2f82f3c2ec6b4b",
+    "timelineBlockGenerator.py": "79c7db13016b6225973650ec561b343e7223b241ae0039bacacd1e810e8d04c6"
+  },
+  "protocol_variants": 0,
+  "source_revision": "51b01ac7faa78a494c3baedc560d658f384afe09",
+  "timing": {
+    "all_pools_valid": true,
+    "all_under_600_seconds": true,
+    "max_seconds": 0.17220940301194787
+  }
+}

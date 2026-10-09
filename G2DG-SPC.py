@@ -80,6 +80,7 @@ def test_pair_on_graph(G, a, b, trials=500, p_edge=0.5, pathPersistency=0.9,
     limited = G
     fg = FrameGenerator()
     t0 = time.perf_counter()
+    random.seed(seed)
     fg.generateSPCFrames(limited, a, b, trials=trials, p_edge=p_edge, pathPersistency=pathPersistency)
     t_frames = time.perf_counter() - t0
     up = fg.path_up_frames
@@ -97,7 +98,7 @@ def test_pair_on_graph(G, a, b, trials=500, p_edge=0.5, pathPersistency=0.9,
 
     DynaGA = SPCDynamicGraph()
     t1 = time.perf_counter()
-    DynaGA.buildDynaGraph(timeLine, up, down)
+    DynaGA.DynamicGraph = _assemble_spc_frames(timeLine, up, down, seed)
     t_build = time.perf_counter() - t1
     print("  DynamicGraph length:", len(DynaGA.DynamicGraph), f"(build_time={t_build:.3f}s)")
 
@@ -140,6 +141,35 @@ def test_pair_on_graph(G, a, b, trials=500, p_edge=0.5, pathPersistency=0.9,
     }
 
 
+def _assemble_spc_frames(timeline, path_up, path_down, seed):
+    """Assemble frames with a local RNG so a seed controls DG frame choices."""
+    states = timeline.get("timeline", [])
+    path_ids = timeline.get("path_ids", [None] * len(states))
+    rng = random.Random(seed)
+    grouped_up = bool(path_up and any(isinstance(group, list) for group in path_up))
+    dynamic_graph = []
+    pid_to_group = {}
+
+    for index, is_up in enumerate(states):
+        if is_up:
+            if grouped_up:
+                path_id = path_ids[index] if index < len(path_ids) else None
+                if path_id is None:
+                    group_index = rng.randrange(len(path_up))
+                elif path_id in pid_to_group:
+                    group_index = pid_to_group[path_id]
+                else:
+                    group_index = rng.randrange(len(path_up))
+                    pid_to_group[path_id] = group_index
+                group = path_up[group_index]
+                dynamic_graph.append(rng.choice(group) if group else nx.Graph())
+            else:
+                dynamic_graph.append(rng.choice(path_up) if path_up else nx.Graph())
+        else:
+            dynamic_graph.append(rng.choice(path_down) if path_down else nx.Graph())
+    return dynamic_graph
+
+
 def build_dynamic_graph(G, a, b, trials=500, p_edge=0.5, pathPersistency=0.9,
                         frames=40, path_life=0.4, stability=0.8, seed=42):
     """
@@ -158,6 +188,7 @@ def build_dynamic_graph(G, a, b, trials=500, p_edge=0.5, pathPersistency=0.9,
     #limited = SourceGraphAugmenter.augmentBaseGraph(G, [(a, b)], seed=seed, verbose=False)
     limited = G
     fg = FrameGenerator()
+    random.seed(seed)
     fg.generateSPCFrames(limited, a, b, trials=trials, p_edge=p_edge, pathPersistency=pathPersistency)
     up = fg.path_up_frames
     down = fg.path_down_frames
@@ -170,7 +201,7 @@ def build_dynamic_graph(G, a, b, trials=500, p_edge=0.5, pathPersistency=0.9,
     timeLine = timeline_gen.generate_blocks()
 
     DynaGA = SPCDynamicGraph()
-    DynaGA.buildDynaGraph(timeLine, up, down)
+    DynaGA.DynamicGraph = _assemble_spc_frames(timeLine, up, down, seed)
 
     stats = {
         "pair": (a, b),
@@ -210,19 +241,11 @@ def sweep_spc_generate(
     best (see the longer note this docstring used to carry, now
     superseded by the pathPersistency case below).
 
-    pathPersistency is structurally different and gets its own branch,
-    not just a third case of the same pattern: it's passed to *both*
-    generateSPCFrames() and SPCTimelineBlockGenerator() (see
-    build_dynamic_graph above), so sweeping it means resampling up/down
-    at every step, not just rebuilding the timeline -- the "sample once,
-    reuse across steps" shortcut the other two use doesn't apply here.
-    There's also no toolbox.timelineFeasibleParams() equivalent for it
-    -- it isn't one of that function's parameters at all -- so its
-    range is taken as plain [0, 1], clipped the same way stability/
-    path_life values already are elsewhere in this file, not derived
-    from any feasibility check. If pathPersistency actually has a
-    narrower valid range than [0, 1], this doesn't know that and will
-    happily generate points outside it.
+    pathPersistency only affects path IDs in the timeline; the current
+    FrameGenerator accepts it for compatibility but does not use it while
+    sampling frames. Its sweep therefore shares the same seeded up/down
+    pool as the other sweeps and varies only path-ID assignment. There is
+    no timelineFeasibleParams() range for this property, so it sweeps [0, 1].
 
     Returns a list of dicts: {'param_name', 'param_value', 'timeline',
     'dynamic_graph'} -- the same shape sweep_mpc_generate() returns, so
@@ -243,24 +266,31 @@ def sweep_spc_generate(
     results = []
     limited = G
 
+    # generateSPCFrames accepts pathPersistency for API compatibility, but it
+    # does not use it when sampling frames. Share one seeded pool across all
+    # sweep values so only the requested timeline property changes.
+    random.seed(seed)
+    fg = FrameGenerator()
+    fg.generateSPCFrames(
+        limited, a, b, trials=trials, p_edge=p_edge,
+        pathPersistency=pathPersistency if pathPersistency is not None else 0.0,
+    )
+    up = fg.path_up_frames
+    down = fg.path_down_frames
+    if len(up) == 0 or len(down) == 0:
+        print(f"  -> No up/down frames found for pair ({a}, {b}); sweep produced no entries.")
+        return results
+
     if param_name == "pathPersistency":
-        # Every step needs its own up/down sample (see docstring).
         vals = np.arange(0.0, 1.0 + 1e-9, step)
         for v in np.unique(np.round(vals, 6)):
             pp_v = float(np.clip(v, 0.0, 1.0))
-            fg = FrameGenerator()
-            fg.generateSPCFrames(limited, a, b, trials=trials, p_edge=p_edge, pathPersistency=pp_v)
-            up = fg.path_up_frames
-            down = fg.path_down_frames
-            if len(up) == 0 or len(down) == 0:
-                print(f"  -> pathPersistency={pp_v:.4f}: no up/down frames found, skipping this point")
-                continue
             timeline_gen = SPCTimelineBlockGenerator(frames=frames, path_life=path_life,
                                                      stability=stability, seed=seed, mode="blocks",
                                                      pathPersistency=pp_v)
             timeLine = timeline_gen.generate_blocks()
             DynaGA = SPCDynamicGraph()
-            DynaGA.buildDynaGraph(timeLine, up, down)
+            DynaGA.DynamicGraph = _assemble_spc_frames(timeLine, up, down, seed)
             results.append({
                 "param_name": param_name,
                 "param_value": pp_v,
@@ -273,14 +303,6 @@ def sweep_spc_generate(
     params_info = toolbox.timelineFeasibleParams(
         frames=frames, path_life=path_life, stability=stability
     )
-    fg = FrameGenerator()
-    fg.generateSPCFrames(limited, a, b, trials=trials, p_edge=p_edge, pathPersistency=pathPersistency)
-    up = fg.path_up_frames
-    down = fg.path_down_frames
-    if len(up) == 0 or len(down) == 0:
-        print(f"  -> No up/down frames found for pair ({a}, {b}); sweep produced no entries.")
-        return results
-
     if param_name == "stability":
         s_min, s_max = params_info.get("feasible_stability", (0.0, 1.0))
         vals = np.arange(s_min, s_max + 1e-9, step)
@@ -291,7 +313,7 @@ def sweep_spc_generate(
                                                      pathPersistency=pathPersistency)
             timeLine = timeline_gen.generate_blocks()
             DynaGA = SPCDynamicGraph()
-            DynaGA.buildDynaGraph(timeLine, up, down)
+            DynaGA.DynamicGraph = _assemble_spc_frames(timeLine, up, down, seed)
             results.append({
                 "param_name": param_name,
                 "param_value": stability_v,
@@ -311,7 +333,7 @@ def sweep_spc_generate(
                                                      pathPersistency=pathPersistency)
             timeLine = timeline_gen.generate_blocks()
             DynaGA = SPCDynamicGraph()
-            DynaGA.buildDynaGraph(timeLine, up, down)
+            DynaGA.DynamicGraph = _assemble_spc_frames(timeLine, up, down, seed)
             results.append({
                 "param_name": param_name,
                 "param_value": path_life_v,

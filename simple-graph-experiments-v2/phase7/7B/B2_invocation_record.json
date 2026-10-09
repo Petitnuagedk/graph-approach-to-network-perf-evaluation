@@ -1,0 +1,38 @@
+{
+  "record_kind": "post-execution evidence consolidation from resolved config, console output, results, and comparator",
+  "gate": "7B-B2 legacy deterministic regression",
+  "status": "executed_and_passed",
+  "created_at_epoch_s": 1791468154,
+  "working_directory": "/home/hledirach/Documents/sp1-sp2",
+  "invocations": 1,
+  "protocol_variants": 3,
+  "protocols": ["olsr", "aodv", "static"],
+  "trace_sha256": "282feae63d0822c096bc427b9e7fc8705447509d352a72a78761805acd81f603",
+  "resolved_interpolation": true,
+  "source_frames": 60,
+  "warmup_frames": 45,
+  "applied_frames_per_protocol": 105,
+  "output_dir": "7B/legacy_after/",
+  "evidence": {
+    "config": "7B/legacy_after/config.json",
+    "config_sha256": "0d5071f63409dc085ede94200af430c51222c834fb6e2ce62274cd7127f1594f",
+    "console_log": "7B/legacy_after/console.log",
+    "console_log_sha256": "be85b971b5d2aa9a9b89a94fa001991253d6972dbc51552634c744a7e54028ef",
+    "results_csv": "7B/legacy_after/trace_replay_results.csv",
+    "results_csv_sha256": "10ff346abd214bc060f78dd2d6d1dae49b6ff58d2e45011946a172ee3415ab65",
+    "comparison": "7B/B2_comparison.json",
+    "comparison_pass": true,
+    "deterministic_mismatches": 0,
+    "deterministic_files_byte_identical": 15,
+    "results_identical_excluding_only_wall_cpu": true
+  },
+  "budget_arithmetic": {
+    "before_b2": 11,
+    "b2_cost": 3,
+    "after_b2": 14,
+    "timing_probe_cost_after_b2": 1,
+    "after_timing_probe": 15,
+    "global_cap": 300,
+    "unit": "protocol variants"
+  }
+}

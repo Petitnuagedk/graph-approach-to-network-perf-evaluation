@@ -1,0 +1,185 @@
+{
+  "infeasible_request_probe": {
+    "clean_HEAD": {
+      "outcome": "timeout_after_2s",
+      "safety_timeout": true
+    },
+    "patched_A0R": {
+      "message": "Infeasible exact timeline: up_count=84, up_runs=51, down_count=36",
+      "outcome": "ValueError"
+    },
+    "request": {
+      "frames": 120,
+      "path_life": 0.7,
+      "stability": 0.4
+    }
+  },
+  "mpc_probes": [
+    {
+      "N": 92,
+      "assembled_frame_count": 120,
+      "assembly_seed": 43,
+      "frame_seed": 42,
+      "frames_sampled": 1000,
+      "p_edge": 0.5,
+      "pairs": [
+        [
+          "Node_0",
+          "Node_31"
+        ],
+        [
+          "Node_1",
+          "Node_91"
+        ]
+      ],
+      "per_pair_down_frame_counts": [
+        94,
+        48
+      ],
+      "per_pair_up_frame_counts": [
+        906,
+        952
+      ],
+      "relation": "disjoint",
+      "selected_status_counts": {
+        "(False, False)": 8,
+        "(False, True)": 52,
+        "(True, False)": 26,
+        "(True, True)": 34
+      },
+      "status_counts": {
+        "(False, False)": 8,
+        "(False, True)": 86,
+        "(True, False)": 40,
+        "(True, True)": 866
+      },
+      "timeline_frames": 120,
+      "timeline_mode": "indep",
+      "timeline_path_life": 0.5,
+      "timeline_seed": 42,
+      "timeline_stability": 0.8,
+      "timeline_status_patterns": 4
+    },
+    {
+      "N": 92,
+      "assembled_frame_count": 120,
+      "assembly_seed": 43,
+      "frame_seed": 42,
+      "frames_sampled": 1000,
+      "p_edge": 0.5,
+      "pairs": [
+        [
+          "Node_0",
+          "Node_31"
+        ],
+        [
+          "Node_0",
+          "Node_1"
+        ]
+      ],
+      "per_pair_down_frame_counts": [
+        94,
+        64
+      ],
+      "per_pair_up_frame_counts": [
+        906,
+        936
+      ],
+      "relation": "shared_source",
+      "selected_status_counts": {
+        "(False, False)": 34,
+        "(False, True)": 26,
+        "(True, False)": 19,
+        "(True, True)": 41
+      },
+      "status_counts": {
+        "(False, False)": 45,
+        "(False, True)": 49,
+        "(True, False)": 19,
+        "(True, True)": 887
+      },
+      "timeline_frames": 120,
+      "timeline_mode": "indep",
+      "timeline_path_life": 0.5,
+      "timeline_seed": 42,
+      "timeline_stability": 0.8,
+      "timeline_status_patterns": 4
+    }
+  ],
+  "out_of_range_probes": [
+    {
+      "frames": 120,
+      "outcome": "returned",
+      "path_life": -0.1,
+      "realized_up_count": 0,
+      "realized_uptime": 0.0,
+      "request": "path_life_below_range",
+      "source": "clean_HEAD",
+      "stability": 0.8
+    },
+    {
+      "message": "path_life must be in [0, 1]",
+      "outcome": "ValueError",
+      "path_life": -0.1,
+      "request": "path_life_below_range",
+      "source": "patched_A0R",
+      "stability": 0.8
+    },
+    {
+      "frames": 120,
+      "outcome": "returned",
+      "path_life": 1.1,
+      "realized_up_count": 120,
+      "realized_uptime": 1.0,
+      "request": "path_life_above_range",
+      "source": "clean_HEAD",
+      "stability": 0.8
+    },
+    {
+      "message": "path_life must be in [0, 1]",
+      "outcome": "ValueError",
+      "path_life": 1.1,
+      "request": "path_life_above_range",
+      "source": "patched_A0R",
+      "stability": 0.8
+    },
+    {
+      "frames": 120,
+      "outcome": "returned",
+      "path_life": 0.5,
+      "realized_up_count": 60,
+      "realized_uptime": 0.5,
+      "request": "stability_below_range",
+      "source": "clean_HEAD",
+      "stability": -0.2
+    },
+    {
+      "message": "stability must be in [0, 1]",
+      "outcome": "ValueError",
+      "path_life": 0.5,
+      "request": "stability_below_range",
+      "source": "patched_A0R",
+      "stability": -0.2
+    },
+    {
+      "frames": 120,
+      "outcome": "returned",
+      "path_life": 0.5,
+      "realized_up_count": 60,
+      "realized_uptime": 0.5,
+      "request": "stability_above_range",
+      "source": "clean_HEAD",
+      "stability": 1.2
+    },
+    {
+      "message": "stability must be in [0, 1]",
+      "outcome": "ValueError",
+      "path_life": 0.5,
+      "request": "stability_above_range",
+      "source": "patched_A0R",
+      "stability": 1.2
+    }
+  ],
+  "protocol_variants": 0,
+  "source_revision": "51b01ac7faa78a494c3baedc560d658f384afe09"
+}

@@ -1,0 +1,44 @@
+{
+  "gate": "7D minimal-scale timing smoke test",
+  "date": "2026-10-08",
+  "status": "completed",
+  "protocol_variants": 1,
+  "cumulative_phase7_variants": 15,
+  "global_variant_cap": 300,
+  "phase7_budget_cap_unit": "protocol variants = graph-run invocations times routing variants",
+  "beta_budget_cap_unit": "protocol variants (decision recorded 2026-10-08)",
+  "pilot_cap_numeric_value": null,
+  "pilot_authorized": false,
+  "timings_seconds": {
+    "explicit_ns3_incremental_build_check_elapsed": 0.60,
+    "graph_run_process_elapsed_including_ns3_wrapper": 1.385584,
+    "simulator_reported_wall_time": 0.227225,
+    "simulator_reported_cpu_time": 0.227203,
+    "process_elapsed_minus_simulator_wall_time": 1.158359
+  },
+  "probe_result": {
+    "trace_frames": 60,
+    "applied_frames_including_warmup": 105,
+    "warmup_frames": 45,
+    "topology_nodes": 5,
+    "flow_count": 1,
+    "flow": "S:R",
+    "dump_routes": true,
+    "offered_packets": 360,
+    "delivered_packets": 183,
+    "pdr": 0.508333,
+    "oracle_usable_uptime": 0.5,
+    "channel_profile": "v2",
+    "interpolate": false,
+    "protocol": "static"
+  },
+  "provenance_sha256": {
+    "trace_frames_csv": "c722ea43c1052ffbe8c40a80a401886461e1b70cb2247ef8793bad6f38ce8bae",
+    "trace_metadata_json": "ec300af9c589726a9acbf2102e29350a439a070d3bf1978a3b3bb29d920bdd53",
+    "invocation_json": "cd2d298ea1062eff105db345f11927bd6281c90ce08cc600a3a7174667ae183c",
+    "probe_preregistration": "c5d0a9e5d93f46dee86a028fe21daa1fdaed0fc3f803d0db115345c60d28610d",
+    "graph_run_cc": "5cd8dfd97aec19b7be5373a6573290cf6c47736e9e516cdf894684e485a7e90f"
+  },
+  "runtime_projection_supported": false,
+  "interpretation": "Minimal-scale end-to-end smoke test only: one static variant on a 5-node, single-flow, 105-applied-frame trace with dumpRoutes enabled. The explicit build measurement was an incremental build check. The 1.158359 s process-minus-simulator-wall difference is arithmetic, not an isolated startup measurement. This verifies toolchain execution and the measured build/process/simulator timings at this point only; it is not a runtime fit and supports no extrapolation to larger N, many flows, dynamic protocols, control traffic, or larger route dumps. The Beta cap unit is protocol variants, but its numeric maximum remains unset pending a separately approved Beta preregistration."
+}

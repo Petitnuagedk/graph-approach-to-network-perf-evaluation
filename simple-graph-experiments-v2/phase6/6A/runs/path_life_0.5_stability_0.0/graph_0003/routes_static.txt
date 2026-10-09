@@ -1,0 +1,2867 @@
+Node: 0, Time: +1s, Local time: +1s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +1s, Local time: +1s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +1s, Local time: +1s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +1s, Local time: +1s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +1s, Local time: +1s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +2s, Local time: +2s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +2s, Local time: +2s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +2s, Local time: +2s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +2s, Local time: +2s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +2s, Local time: +2s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +3s, Local time: +3s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +3s, Local time: +3s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +3s, Local time: +3s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +3s, Local time: +3s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +3s, Local time: +3s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +4s, Local time: +4s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +4s, Local time: +4s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +4s, Local time: +4s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +4s, Local time: +4s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +4s, Local time: +4s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +5s, Local time: +5s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +5s, Local time: +5s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +5s, Local time: +5s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +5s, Local time: +5s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +5s, Local time: +5s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +6s, Local time: +6s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +6s, Local time: +6s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +6s, Local time: +6s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +6s, Local time: +6s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +6s, Local time: +6s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +7s, Local time: +7s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +7s, Local time: +7s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +7s, Local time: +7s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +7s, Local time: +7s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +7s, Local time: +7s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +8s, Local time: +8s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +8s, Local time: +8s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +8s, Local time: +8s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +8s, Local time: +8s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +8s, Local time: +8s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +9s, Local time: +9s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +9s, Local time: +9s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +9s, Local time: +9s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +9s, Local time: +9s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +9s, Local time: +9s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +10s, Local time: +10s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +10s, Local time: +10s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +10s, Local time: +10s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +10s, Local time: +10s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +10s, Local time: +10s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +11s, Local time: +11s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +11s, Local time: +11s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +11s, Local time: +11s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +11s, Local time: +11s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +11s, Local time: +11s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +12s, Local time: +12s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +12s, Local time: +12s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +12s, Local time: +12s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +12s, Local time: +12s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +12s, Local time: +12s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +13s, Local time: +13s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +13s, Local time: +13s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +13s, Local time: +13s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +13s, Local time: +13s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +13s, Local time: +13s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +14s, Local time: +14s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +14s, Local time: +14s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +14s, Local time: +14s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +14s, Local time: +14s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +14s, Local time: +14s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +15s, Local time: +15s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +15s, Local time: +15s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +15s, Local time: +15s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +15s, Local time: +15s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +15s, Local time: +15s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +16s, Local time: +16s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +16s, Local time: +16s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +16s, Local time: +16s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +16s, Local time: +16s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +16s, Local time: +16s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +17s, Local time: +17s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +17s, Local time: +17s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +17s, Local time: +17s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +17s, Local time: +17s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +17s, Local time: +17s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +18s, Local time: +18s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +18s, Local time: +18s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +18s, Local time: +18s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +18s, Local time: +18s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +18s, Local time: +18s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +19s, Local time: +19s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +19s, Local time: +19s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +19s, Local time: +19s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +19s, Local time: +19s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +19s, Local time: +19s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +20s, Local time: +20s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +20s, Local time: +20s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +20s, Local time: +20s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +20s, Local time: +20s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +20s, Local time: +20s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +21s, Local time: +21s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +21s, Local time: +21s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +21s, Local time: +21s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +21s, Local time: +21s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +21s, Local time: +21s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +22s, Local time: +22s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +22s, Local time: +22s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +22s, Local time: +22s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +22s, Local time: +22s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +22s, Local time: +22s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +23s, Local time: +23s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +23s, Local time: +23s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +23s, Local time: +23s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +23s, Local time: +23s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +23s, Local time: +23s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +24s, Local time: +24s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +24s, Local time: +24s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +24s, Local time: +24s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +24s, Local time: +24s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +24s, Local time: +24s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +25s, Local time: +25s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +25s, Local time: +25s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +25s, Local time: +25s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +25s, Local time: +25s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +25s, Local time: +25s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +26s, Local time: +26s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +26s, Local time: +26s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +26s, Local time: +26s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +26s, Local time: +26s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +26s, Local time: +26s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +27s, Local time: +27s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +27s, Local time: +27s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +27s, Local time: +27s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +27s, Local time: +27s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +27s, Local time: +27s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +28s, Local time: +28s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +28s, Local time: +28s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +28s, Local time: +28s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +28s, Local time: +28s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +28s, Local time: +28s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +29s, Local time: +29s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +29s, Local time: +29s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +29s, Local time: +29s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +29s, Local time: +29s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +29s, Local time: +29s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +30s, Local time: +30s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +30s, Local time: +30s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +30s, Local time: +30s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +30s, Local time: +30s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +30s, Local time: +30s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +31s, Local time: +31s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +31s, Local time: +31s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +31s, Local time: +31s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +31s, Local time: +31s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +31s, Local time: +31s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +32s, Local time: +32s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +32s, Local time: +32s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +32s, Local time: +32s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +32s, Local time: +32s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +32s, Local time: +32s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +33s, Local time: +33s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +33s, Local time: +33s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +33s, Local time: +33s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +33s, Local time: +33s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +33s, Local time: +33s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +34s, Local time: +34s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +34s, Local time: +34s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +34s, Local time: +34s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +34s, Local time: +34s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +34s, Local time: +34s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +35s, Local time: +35s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +35s, Local time: +35s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +35s, Local time: +35s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +35s, Local time: +35s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +35s, Local time: +35s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +36s, Local time: +36s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +36s, Local time: +36s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +36s, Local time: +36s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +36s, Local time: +36s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +36s, Local time: +36s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +37s, Local time: +37s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +37s, Local time: +37s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +37s, Local time: +37s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +37s, Local time: +37s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +37s, Local time: +37s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +38s, Local time: +38s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +38s, Local time: +38s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +38s, Local time: +38s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +38s, Local time: +38s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +38s, Local time: +38s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +39s, Local time: +39s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +39s, Local time: +39s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +39s, Local time: +39s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +39s, Local time: +39s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +39s, Local time: +39s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +40s, Local time: +40s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +40s, Local time: +40s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +40s, Local time: +40s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +40s, Local time: +40s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +40s, Local time: +40s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +41s, Local time: +41s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +41s, Local time: +41s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +41s, Local time: +41s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +41s, Local time: +41s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +41s, Local time: +41s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +42s, Local time: +42s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +42s, Local time: +42s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +42s, Local time: +42s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +42s, Local time: +42s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +42s, Local time: +42s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +43s, Local time: +43s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +43s, Local time: +43s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +43s, Local time: +43s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +43s, Local time: +43s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +43s, Local time: +43s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +44s, Local time: +44s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +44s, Local time: +44s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +44s, Local time: +44s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +44s, Local time: +44s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +44s, Local time: +44s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +45s, Local time: +45s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +45s, Local time: +45s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +45s, Local time: +45s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +45s, Local time: +45s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +45s, Local time: +45s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +46s, Local time: +46s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 1, Time: +46s, Local time: +46s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 2, Time: +46s, Local time: +46s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 3, Time: +46s, Local time: +46s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +46s, Local time: +46s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 0, Time: +47s, Local time: +47s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 1, Time: +47s, Local time: +47s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 2, Time: +47s, Local time: +47s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 3, Time: +47s, Local time: +47s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +47s, Local time: +47s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 0, Time: +48s, Local time: +48s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +48s, Local time: +48s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +48s, Local time: +48s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +48s, Local time: +48s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +48s, Local time: +48s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +49s, Local time: +49s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 1, Time: +49s, Local time: +49s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 2, Time: +49s, Local time: +49s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 3, Time: +49s, Local time: +49s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +49s, Local time: +49s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 0, Time: +50s, Local time: +50s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +50s, Local time: +50s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +50s, Local time: +50s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +50s, Local time: +50s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +50s, Local time: +50s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +51s, Local time: +51s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 1, Time: +51s, Local time: +51s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 2, Time: +51s, Local time: +51s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 3, Time: +51s, Local time: +51s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +51s, Local time: +51s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 0, Time: +52s, Local time: +52s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +52s, Local time: +52s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +52s, Local time: +52s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +52s, Local time: +52s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +52s, Local time: +52s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +53s, Local time: +53s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 1, Time: +53s, Local time: +53s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 2, Time: +53s, Local time: +53s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 3, Time: +53s, Local time: +53s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +53s, Local time: +53s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 0, Time: +54s, Local time: +54s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +54s, Local time: +54s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +54s, Local time: +54s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +54s, Local time: +54s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +54s, Local time: +54s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +55s, Local time: +55s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 1, Time: +55s, Local time: +55s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 2, Time: +55s, Local time: +55s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 3, Time: +55s, Local time: +55s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +55s, Local time: +55s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 0, Time: +56s, Local time: +56s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +56s, Local time: +56s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +56s, Local time: +56s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +56s, Local time: +56s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +56s, Local time: +56s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +57s, Local time: +57s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 1, Time: +57s, Local time: +57s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 2, Time: +57s, Local time: +57s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 3, Time: +57s, Local time: +57s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +57s, Local time: +57s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 0, Time: +58s, Local time: +58s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +58s, Local time: +58s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +58s, Local time: +58s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +58s, Local time: +58s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +58s, Local time: +58s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +59s, Local time: +59s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 1, Time: +59s, Local time: +59s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 2, Time: +59s, Local time: +59s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 3, Time: +59s, Local time: +59s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +59s, Local time: +59s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 0, Time: +60s, Local time: +60s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +60s, Local time: +60s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +60s, Local time: +60s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +60s, Local time: +60s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +60s, Local time: +60s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +61s, Local time: +61s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 1, Time: +61s, Local time: +61s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 2, Time: +61s, Local time: +61s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 3, Time: +61s, Local time: +61s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +61s, Local time: +61s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 0, Time: +62s, Local time: +62s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +62s, Local time: +62s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +62s, Local time: +62s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +62s, Local time: +62s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +62s, Local time: +62s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +63s, Local time: +63s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 1, Time: +63s, Local time: +63s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 2, Time: +63s, Local time: +63s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 3, Time: +63s, Local time: +63s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +63s, Local time: +63s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 0, Time: +64s, Local time: +64s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +64s, Local time: +64s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +64s, Local time: +64s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +64s, Local time: +64s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +64s, Local time: +64s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +65s, Local time: +65s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 1, Time: +65s, Local time: +65s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 2, Time: +65s, Local time: +65s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 3, Time: +65s, Local time: +65s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +65s, Local time: +65s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 0, Time: +66s, Local time: +66s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +66s, Local time: +66s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +66s, Local time: +66s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +66s, Local time: +66s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +66s, Local time: +66s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +67s, Local time: +67s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 1, Time: +67s, Local time: +67s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 2, Time: +67s, Local time: +67s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 3, Time: +67s, Local time: +67s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +67s, Local time: +67s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 0, Time: +68s, Local time: +68s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +68s, Local time: +68s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +68s, Local time: +68s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +68s, Local time: +68s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +68s, Local time: +68s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +69s, Local time: +69s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 1, Time: +69s, Local time: +69s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 2, Time: +69s, Local time: +69s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 3, Time: +69s, Local time: +69s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +69s, Local time: +69s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 0, Time: +70s, Local time: +70s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +70s, Local time: +70s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +70s, Local time: +70s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +70s, Local time: +70s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +70s, Local time: +70s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +71s, Local time: +71s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 1, Time: +71s, Local time: +71s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 2, Time: +71s, Local time: +71s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 3, Time: +71s, Local time: +71s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +71s, Local time: +71s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 0, Time: +72s, Local time: +72s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +72s, Local time: +72s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +72s, Local time: +72s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +72s, Local time: +72s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +72s, Local time: +72s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +73s, Local time: +73s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 1, Time: +73s, Local time: +73s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 2, Time: +73s, Local time: +73s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 3, Time: +73s, Local time: +73s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +73s, Local time: +73s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 0, Time: +74s, Local time: +74s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +74s, Local time: +74s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +74s, Local time: +74s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +74s, Local time: +74s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +74s, Local time: +74s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +75s, Local time: +75s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 1, Time: +75s, Local time: +75s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 2, Time: +75s, Local time: +75s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 3, Time: +75s, Local time: +75s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +75s, Local time: +75s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 0, Time: +76s, Local time: +76s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +76s, Local time: +76s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +76s, Local time: +76s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +76s, Local time: +76s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +76s, Local time: +76s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +77s, Local time: +77s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 1, Time: +77s, Local time: +77s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 2, Time: +77s, Local time: +77s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 3, Time: +77s, Local time: +77s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +77s, Local time: +77s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 0, Time: +78s, Local time: +78s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +78s, Local time: +78s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +78s, Local time: +78s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +78s, Local time: +78s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +78s, Local time: +78s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +79s, Local time: +79s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 1, Time: +79s, Local time: +79s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 2, Time: +79s, Local time: +79s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 3, Time: +79s, Local time: +79s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +79s, Local time: +79s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 0, Time: +80s, Local time: +80s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +80s, Local time: +80s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +80s, Local time: +80s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +80s, Local time: +80s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +80s, Local time: +80s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +81s, Local time: +81s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 1, Time: +81s, Local time: +81s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 2, Time: +81s, Local time: +81s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 3, Time: +81s, Local time: +81s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +81s, Local time: +81s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 0, Time: +82s, Local time: +82s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +82s, Local time: +82s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +82s, Local time: +82s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +82s, Local time: +82s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +82s, Local time: +82s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +83s, Local time: +83s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 1, Time: +83s, Local time: +83s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 2, Time: +83s, Local time: +83s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 3, Time: +83s, Local time: +83s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +83s, Local time: +83s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 0, Time: +84s, Local time: +84s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +84s, Local time: +84s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +84s, Local time: +84s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +84s, Local time: +84s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +84s, Local time: +84s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +85s, Local time: +85s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 1, Time: +85s, Local time: +85s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 2, Time: +85s, Local time: +85s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 3, Time: +85s, Local time: +85s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +85s, Local time: +85s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 0, Time: +86s, Local time: +86s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +86s, Local time: +86s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +86s, Local time: +86s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +86s, Local time: +86s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +86s, Local time: +86s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +87s, Local time: +87s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 1, Time: +87s, Local time: +87s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 2, Time: +87s, Local time: +87s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 3, Time: +87s, Local time: +87s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +87s, Local time: +87s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 0, Time: +88s, Local time: +88s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +88s, Local time: +88s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +88s, Local time: +88s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +88s, Local time: +88s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +88s, Local time: +88s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +89s, Local time: +89s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 1, Time: +89s, Local time: +89s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 2, Time: +89s, Local time: +89s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 3, Time: +89s, Local time: +89s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +89s, Local time: +89s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 0, Time: +90s, Local time: +90s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +90s, Local time: +90s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +90s, Local time: +90s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +90s, Local time: +90s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +90s, Local time: +90s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +91s, Local time: +91s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 1, Time: +91s, Local time: +91s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 2, Time: +91s, Local time: +91s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 3, Time: +91s, Local time: +91s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +91s, Local time: +91s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 0, Time: +92s, Local time: +92s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +92s, Local time: +92s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +92s, Local time: +92s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +92s, Local time: +92s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +92s, Local time: +92s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +93s, Local time: +93s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 1, Time: +93s, Local time: +93s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 2, Time: +93s, Local time: +93s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 3, Time: +93s, Local time: +93s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +93s, Local time: +93s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 0, Time: +94s, Local time: +94s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +94s, Local time: +94s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +94s, Local time: +94s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +94s, Local time: +94s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +94s, Local time: +94s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +95s, Local time: +95s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 1, Time: +95s, Local time: +95s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 2, Time: +95s, Local time: +95s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 3, Time: +95s, Local time: +95s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +95s, Local time: +95s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 0, Time: +96s, Local time: +96s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +96s, Local time: +96s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +96s, Local time: +96s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +96s, Local time: +96s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +96s, Local time: +96s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +97s, Local time: +97s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 1, Time: +97s, Local time: +97s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 2, Time: +97s, Local time: +97s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 3, Time: +97s, Local time: +97s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +97s, Local time: +97s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 0, Time: +98s, Local time: +98s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +98s, Local time: +98s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +98s, Local time: +98s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +98s, Local time: +98s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +98s, Local time: +98s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +99s, Local time: +99s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 1, Time: +99s, Local time: +99s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 2, Time: +99s, Local time: +99s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 3, Time: +99s, Local time: +99s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +99s, Local time: +99s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 0, Time: +100s, Local time: +100s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +100s, Local time: +100s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +100s, Local time: +100s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +100s, Local time: +100s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +100s, Local time: +100s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +101s, Local time: +101s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 1, Time: +101s, Local time: +101s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 2, Time: +101s, Local time: +101s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 3, Time: +101s, Local time: +101s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +101s, Local time: +101s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 0, Time: +102s, Local time: +102s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.2        255.255.255.255 UHS   0      -      -   1
+
+Node: 1, Time: +102s, Local time: +102s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.3        255.255.255.255 UHS   0      -      -   1
+
+Node: 2, Time: +102s, Local time: +102s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.4        255.255.255.255 UHS   0      -      -   1
+
+Node: 3, Time: +102s, Local time: +102s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +102s, Local time: +102s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+10.1.0.4        10.1.0.1        255.255.255.255 UHS   0      -      -   1
+
+Node: 0, Time: +103s, Local time: +103s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 1, Time: +103s, Local time: +103s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 2, Time: +103s, Local time: +103s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 3, Time: +103s, Local time: +103s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+
+Node: 4, Time: +103s, Local time: +103s, Ipv4StaticRouting table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+127.0.0.0       0.0.0.0         255.0.0.0       U     0      -      -   0
+10.1.0.0        0.0.0.0         255.255.0.0     U     0      -      -   1
+

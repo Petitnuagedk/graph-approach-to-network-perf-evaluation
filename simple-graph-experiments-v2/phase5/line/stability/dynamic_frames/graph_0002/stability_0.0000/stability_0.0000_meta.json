@@ -1,0 +1,8 @@
+{
+  "entry_name": "stability_0.0000",
+  "frames": 60,
+  "nodes_file": "nodes.txt",
+  "frames_file": "frames.csv",
+  "format": "csv",
+  "entry_dir": "stability_0.0000"
+}

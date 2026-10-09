@@ -1,0 +1,11 @@
+Loading frames from /home/hledirach/Documents/J2/simple-graph-experiments-v2/phase5/line/path_life/dynamic_frames/graph_0001/path_life_0.7000/frames.csv ...
+  Loaded 105 frames, 5 nodes, dimension 5
+  Time span: 0s .. 104s
+Traffic flows (1): S->R
+
+=== Trace replay (matrix-based connectivity) ===
+  [olsr] ... wall=0.489s  cpu=0.489s  tx_cb=1621  rx_cb=1748  apply_frames=105  pdr=0.803
+  [aodv] ... wall=0.597s  cpu=0.597s  tx_cb=2180  rx_cb=2440  apply_frames=105  pdr=0.969
+  [static] ... wall=0.303s  cpu=0.303s  tx_cb=1081  rx_cb=959  apply_frames=105  pdr=0.661
+
+Replay results written to: /home/hledirach/Documents/J2/simple-graph-experiments-v2/phase7/7B/legacy_after/trace_replay_results.csv

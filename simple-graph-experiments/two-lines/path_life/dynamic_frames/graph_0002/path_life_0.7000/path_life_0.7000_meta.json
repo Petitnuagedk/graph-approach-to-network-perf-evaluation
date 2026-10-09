@@ -1,0 +1,8 @@
+{
+  "entry_name": "path_life_0.7000",
+  "frames": 60,
+  "nodes_file": "nodes.txt",
+  "frames_file": "frames.csv",
+  "format": "csv",
+  "entry_dir": "path_life_0.7000"
+}

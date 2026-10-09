@@ -157,9 +157,9 @@ def build_line_with_terminals(length):
     return G
 
 
-G = build_ladder_with_terminals(7)
-print(nx.info(G))
 if __name__ == "__main__":
+    G = build_ladder_with_terminals(7)
+    print(f"Graph: {G.number_of_nodes()} nodes, {G.number_of_edges()} edges")
     # demo: build and plot the diagonal ladder matching requested edges
     G_diag = build_diagonal_ladder_with_terminals(7)
     print(nx.info(G_diag))

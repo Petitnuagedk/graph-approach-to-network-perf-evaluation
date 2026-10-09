@@ -1,0 +1,76 @@
+SIMPLE-GRAPH DYNAMIC NETWORK EXPERIMENTS
+Experiment handoff and current status
+Date: 2026-10-07
+
+OBJECTIVE
+=========
+Build and run a reproducible experiment campaign that starts from small static graph topologies and generates dynamic graph traces with controlled path lifetime, stability, and path-persistency properties. Replay each trace in ns-3 and compare network performance and measured dynamic-graph properties across parameter values, topologies, graph realizations, and routing protocols. The initial design uses a single S-to-R flow and simple topologies so expected plot patterns are interpretable.
+
+TASKS AND COMPLETION
+====================
+1. Select simple static graph families and define the single-path experiment design.
+   Status: Complete. Topologies are line, two-lines, and ladder, each with topology length 3 and S-to-R traffic.
+
+2. Generate seeded dynamic frames for parameter sweeps and measure realized graph properties.
+   Status: Complete. Frame generation is seeded; persistency sweeps share a common sampled pool. Measured DG properties are recorded with the generated frames.
+
+3. Prevent impossible lifetime/stability timeline configurations.
+   Status: Complete. The timeline generation helper was updated to bound up-runs and split counts. The external helper modified is /home/hledirach/Documents/YaDyGaGa/yadygaga/timelineBlockGenerator.py.
+
+4. Replay generated traces in ns-3 and produce performance and DG-property plots.
+   Status: Complete. The ns-3 smoke test passed; the complete campaign ran through all topology/parameter combinations and the pipeline reported completion with exit code 0.
+
+5. Verify experiment outputs and counts.
+   Status: Complete. All 9 sweep directories have expected generated data, summary tables, and plots. Each summary.csv has 375 data rows. There are 225 aggregate replay CSVs, 1,125 campaign replay-epoch CSVs, and 63 PNG plots. A separate smoke-test replay contributes one additional epoch CSV; it is not part of the campaign.
+
+CAMPAIGN CONFIGURATION
+======================
+Topologies: line, two-lines, ladder.
+Swept properties: path_life, stability, pathPersistency.
+Topology length: 3.
+Dynamic trace: 60 frames per case; 8 nodes for the ladder replay observed.
+Graph realizations: 5 (graph_0001 through graph_0005).
+Routing protocols: OLSR, AODV, DSDV.
+Traffic: one S-to-R flow.
+Seed: 42 base seed; replay epochs use deterministic distinct seeds.
+Other reported settings: edge probability 0.5; 1,000 trials; five replay epochs per sweep point.
+Sweep increments: path_life 0.2; stability 0.2; pathPersistency 0.25.
+Observed sweep values in outputs: pathPersistency = 0.00, 0.25, 0.50, 0.75, 1.00. Each parameter sweep has 5 values × 5 graph realizations = 25 graph/value cases per topology/parameter directory.
+
+OUTPUTS
+=======
+Campaign root:
+/home/hledirach/Documents/J2/simple-graph-experiments/
+
+Directory layout per topology and parameter:
+<campaign-root>/<topology>/<parameter>/
+  dynamic_frames/   Generated traces and measured graph properties
+  ns3-results/      Per-case aggregate replay CSVs and per-epoch replay CSVs
+  plots/            summary.csv and PNG plots
+
+There are nine topology/parameter combinations (3 topologies × 3 parameters). Each has one summary.csv and seven plots: PDR, GOODPUT, EED, RTX, DG uptime ratio, DG mean up-run length, and DG path-identity retention, with filenames suffixed for the relevant sweep parameter.
+
+KEY CODE AND TOOLCHAIN
+======================
+Workspace: /home/hledirach/Documents/J2
+Python environment: /home/hledirach/Documents/J2/.venv (Python 3.14.4).
+ns-3 root: /home/hledirach/Documents/sp1-sp2; runner: ./ns3; scenario: scratch/graph-run.cc.
+
+Relevant workspace scripts:
+  G2DG-SPC.py                 Dynamic graph generation and seeded sampling.
+  run_pipeline-sweep.py       Pipeline stages and measured-property reporting.
+  plot.py                     Summary and plot generation; supports DG-only output.
+  run_simple_graph_experiments.py  Named topology/property campaign runner.
+  README.md                   Workflow, diagnostics, and reuse notes.
+
+Known environment note: Pylance showed yadygaga.toolbox as unresolved in the J2 workspace, although runtime imports and execution worked. This was an editor analysis warning, not a campaign failure.
+
+RESULT INTERPRETATION / CAVEATS
+===============================
+Diagnostics showed the line topology has a single route and route-identity retention of 1.0. The two-lines topology showed route-retention response to path persistency. Measured lifetime and stability tracked their requested sweep settings. In the ladder persistency outputs, AODV PDR varied with persistency, while OLSR often reported zero PDR in the shown replays; interpret performance per protocol and topology rather than assuming every curve changes monotonically.
+
+The earlier rough total estimate of 225 replay epochs was not the correct accounting basis. Verified campaign epoch count is 1,125: 3 topologies × 3 parameters × 5 sweep values × 5 graph realizations × 5 replay epochs. This is distinct from 225 aggregate replay CSVs, which correspond to 3 × 3 × 5 × 5 topology/parameter/graph/value cases. Each replay CSV contains the protocol results for a replay epoch.
+
+CURRENT STATUS
+==============
+The campaign is finished; no experiment process needs monitoring or restarting. All expected output directories, summary files, and plots were found. The most recent run ended with "Pipeline complete" and "Experiment matrix complete". The output root is ready for analysis and review.

@@ -1,0 +1,2 @@
+trace_frame_uptime,traffic_start_s,traffic_stop_s,traffic_window_s,traffic_frame_uptime,traffic_usable_uptime,usable_loss_limit_db
+1.000000000,0.100000000,236.000000000,235.900000000,1.000000000,1.000000000,121.000000000

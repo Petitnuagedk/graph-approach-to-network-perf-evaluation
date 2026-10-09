@@ -1,0 +1,2 @@
+param_name,param_value,source,destination,requested_path_life,requested_stability,requested_path_persistency,frames,up_frames,uptime_ratio,up_runs,mean_up_run_frames,max_up_run_frames,down_runs,path_identity_retention,route_changes,distinct_routes
+path_life,0.1,S,R,0.1,0.8,0.75,60,6,0.1,2,3.0,3,1,0.5,2,4

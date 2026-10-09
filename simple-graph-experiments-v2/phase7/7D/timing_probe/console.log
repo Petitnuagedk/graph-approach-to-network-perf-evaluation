@@ -1,0 +1,9 @@
+Loading frames from /home/hledirach/Documents/J2/simple-graph-experiments-v2/phase7/7D/traces/line/pathlife_0.50__stability_0.80__persistency_0.75/realization_01/frames.csv ...
+  Loaded 105 frames, 5 nodes, dimension 5
+  Time span: 0s .. 104s
+Traffic flows (1): S->R
+
+=== Trace replay (matrix-based connectivity) ===
+  [static] ... wall=0.227s  cpu=0.227s  tx_cb=909  rx_cb=732  apply_frames=105  pdr=0.508
+
+Replay results written to: /home/hledirach/Documents/J2/simple-graph-experiments-v2/phase7/7D/timing_probe/run/trace_replay_results.csv

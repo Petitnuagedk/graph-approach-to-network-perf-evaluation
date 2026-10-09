@@ -1,0 +1,25 @@
+{
+  "cwd": "/home/hledirach/Documents/sp1-sp2",
+  "command_prefix": ["./ns3", "run", "graph-run"],
+  "frames_csv": "/home/hledirach/Documents/J2/simple-graph-experiments-v2/phase7/7D/traces/line/pathlife_0.50__stability_0.80__persistency_0.75/realization_01/frames.csv",
+  "out_dir": "/home/hledirach/Documents/J2/simple-graph-experiments-v2/phase7/7D/timing_probe/run",
+  "protocol_variants": 1,
+  "arguments": [
+    "--routing=static",
+    "--flows=S:R",
+    "--dataRate=50kbps",
+    "--packetSize=1024",
+    "--lossThresholdDb=150",
+    "--channelProfile=v2",
+    "--defaultLossDb=1000000",
+    "--txPowerDbm=20",
+    "--linkUpLossDb=10",
+    "--linkDownLossDb=125",
+    "--fps=1",
+    "--seed=42",
+    "--warmup=45",
+    "--warmupMode=first",
+    "--dumpRoutes=true",
+    "--staticOracleMode=usable"
+  ]
+}

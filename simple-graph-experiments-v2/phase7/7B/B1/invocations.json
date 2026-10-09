@@ -1,0 +1,152 @@
+[
+  {
+    "cwd": "/home/hledirach/Documents/sp1-sp2",
+    "command_prefix": [
+      "./ns3",
+      "run",
+      "graph-run"
+    ],
+    "frames_csv": "/home/hledirach/Documents/J2/simple-graph-experiments-v2/phase7/7B/B1/fixtures/alternating_sr_60.csv",
+    "out_dir": "/home/hledirach/Documents/J2/simple-graph-experiments-v2/phase7/7B/B1/runs/downloss_125",
+    "arguments": [
+      "--framesCsv=/home/hledirach/Documents/J2/simple-graph-experiments-v2/phase7/7B/B1/fixtures/alternating_sr_60.csv",
+      "--outDir=/home/hledirach/Documents/J2/simple-graph-experiments-v2/phase7/7B/B1/runs/downloss_125",
+      "--routing=static",
+      "--flows=S:R",
+      "--packetSize=1024",
+      "--lossThresholdDb=150",
+      "--channelProfile=v2",
+      "--defaultLossDb=1000000",
+      "--txPowerDbm=20",
+      "--linkUpLossDb=10",
+      "--fps=1",
+      "--seed=42",
+      "--warmup=0",
+      "--warmupMode=first",
+      "--dumpRoutes=true",
+      "--staticOracleMode=usable",
+      "--linkDownLossDb=125",
+      "--dataRate=1Mbps"
+    ]
+  },
+  {
+    "cwd": "/home/hledirach/Documents/sp1-sp2",
+    "command_prefix": [
+      "./ns3",
+      "run",
+      "graph-run"
+    ],
+    "frames_csv": "/home/hledirach/Documents/J2/simple-graph-experiments-v2/phase7/7B/B1/fixtures/alternating_sr_60.csv",
+    "out_dir": "/home/hledirach/Documents/J2/simple-graph-experiments-v2/phase7/7B/B1/runs/downloss_200",
+    "arguments": [
+      "--framesCsv=/home/hledirach/Documents/J2/simple-graph-experiments-v2/phase7/7B/B1/fixtures/alternating_sr_60.csv",
+      "--outDir=/home/hledirach/Documents/J2/simple-graph-experiments-v2/phase7/7B/B1/runs/downloss_200",
+      "--routing=static",
+      "--flows=S:R",
+      "--packetSize=1024",
+      "--lossThresholdDb=150",
+      "--channelProfile=v2",
+      "--defaultLossDb=1000000",
+      "--txPowerDbm=20",
+      "--linkUpLossDb=10",
+      "--fps=1",
+      "--seed=42",
+      "--warmup=0",
+      "--warmupMode=first",
+      "--dumpRoutes=true",
+      "--staticOracleMode=usable",
+      "--linkDownLossDb=200",
+      "--dataRate=1Mbps"
+    ]
+  },
+  {
+    "cwd": "/home/hledirach/Documents/sp1-sp2",
+    "command_prefix": [
+      "./ns3",
+      "run",
+      "graph-run"
+    ],
+    "frames_csv": "/home/hledirach/Documents/J2/simple-graph-experiments-v2/phase7/7B/B1/fixtures/alternating_sr_60.csv",
+    "out_dir": "/home/hledirach/Documents/J2/simple-graph-experiments-v2/phase7/7B/B1/runs/downloss_1000000",
+    "arguments": [
+      "--framesCsv=/home/hledirach/Documents/J2/simple-graph-experiments-v2/phase7/7B/B1/fixtures/alternating_sr_60.csv",
+      "--outDir=/home/hledirach/Documents/J2/simple-graph-experiments-v2/phase7/7B/B1/runs/downloss_1000000",
+      "--routing=static",
+      "--flows=S:R",
+      "--packetSize=1024",
+      "--lossThresholdDb=150",
+      "--channelProfile=v2",
+      "--defaultLossDb=1000000",
+      "--txPowerDbm=20",
+      "--linkUpLossDb=10",
+      "--fps=1",
+      "--seed=42",
+      "--warmup=0",
+      "--warmupMode=first",
+      "--dumpRoutes=true",
+      "--staticOracleMode=usable",
+      "--linkDownLossDb=1000000",
+      "--dataRate=1Mbps"
+    ]
+  },
+  {
+    "cwd": "/home/hledirach/Documents/sp1-sp2",
+    "command_prefix": [
+      "./ns3",
+      "run",
+      "graph-run"
+    ],
+    "frames_csv": "/home/hledirach/Documents/J2/simple-graph-experiments-v2/phase7/7B/B1/fixtures/all_up_line_60.csv",
+    "out_dir": "/home/hledirach/Documents/J2/simple-graph-experiments-v2/phase7/7B/B1/runs/all_up_line",
+    "arguments": [
+      "--framesCsv=/home/hledirach/Documents/J2/simple-graph-experiments-v2/phase7/7B/B1/fixtures/all_up_line_60.csv",
+      "--outDir=/home/hledirach/Documents/J2/simple-graph-experiments-v2/phase7/7B/B1/runs/all_up_line",
+      "--routing=static",
+      "--flows=S:R",
+      "--packetSize=1024",
+      "--lossThresholdDb=150",
+      "--channelProfile=v2",
+      "--defaultLossDb=1000000",
+      "--txPowerDbm=20",
+      "--linkUpLossDb=10",
+      "--fps=1",
+      "--seed=42",
+      "--warmup=0",
+      "--warmupMode=first",
+      "--dumpRoutes=true",
+      "--staticOracleMode=usable",
+      "--linkDownLossDb=125",
+      "--dataRate=50kbps"
+    ]
+  },
+  {
+    "cwd": "/home/hledirach/Documents/sp1-sp2",
+    "command_prefix": [
+      "./ns3",
+      "run",
+      "graph-run"
+    ],
+    "frames_csv": "/home/hledirach/Documents/J2/simple-graph-experiments-v2/phase7/7B/B1/fixtures/all_up_ladder_60.csv",
+    "out_dir": "/home/hledirach/Documents/J2/simple-graph-experiments-v2/phase7/7B/B1/runs/all_up_ladder",
+    "arguments": [
+      "--framesCsv=/home/hledirach/Documents/J2/simple-graph-experiments-v2/phase7/7B/B1/fixtures/all_up_ladder_60.csv",
+      "--outDir=/home/hledirach/Documents/J2/simple-graph-experiments-v2/phase7/7B/B1/runs/all_up_ladder",
+      "--routing=static",
+      "--flows=S:R",
+      "--packetSize=1024",
+      "--lossThresholdDb=150",
+      "--channelProfile=v2",
+      "--defaultLossDb=1000000",
+      "--txPowerDbm=20",
+      "--linkUpLossDb=10",
+      "--fps=1",
+      "--seed=42",
+      "--warmup=0",
+      "--warmupMode=first",
+      "--dumpRoutes=true",
+      "--staticOracleMode=usable",
+      "--linkDownLossDb=125",
+      "--dataRate=50kbps"
+    ]
+  }
+]

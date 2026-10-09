@@ -1,0 +1,84 @@
+{
+  "phase": "6A",
+  "status_at_creation": "preregistered before the 6A batch",
+  "ns3_version": "3.46.1",
+  "ns3_source_is_git_repository": false,
+  "j2_revision": "ed1425c2cc3e62eafa7be0d9e821d5cca7a7e43b",
+  "j2_worktree_dirty": true,
+  "source_sha256": {
+    "run_pipeline-sweep.py": "c3bcf2f1af4e4dcb35658a4f851b9af1a462cba69ecf2f3a52cfebd078214720",
+    "G2DG-SPC.py": "3231c9c6a8b4a25f3fbfd5d3eadfd0c785b45043fd90bfb3c39ba5e6f390a03b",
+    "oracle_metrics.py": "6eee72eac7768c9bbdaa1b7bf6c77f1c7e0e4bfc0b292a8b253ad719c5e25078",
+    "sp1-sp2/scratch/graph-run.cc": "363becb4480b4dc7201bab2ca3561832c3642ad32597bc8fe79f551112808212",
+    "sp1-sp2/VERSION": "85bfe581154167c2eced397cfa1a4d744c33fd3926790f7e765fbf0b502b6dc6"
+  },
+  "design": {
+    "topology": "line, length 3; S to R",
+    "trace_frames": 60,
+    "fps": 1.0,
+    "traffic": "50kbps UDP, 1024 bytes",
+    "warmup_s": 45,
+    "warmup_mode": "first",
+    "link_up_loss_db": 10,
+    "link_down_loss_db": 125,
+    "loss_threshold_db": 150,
+    "interpolate": true,
+    "tx_power_dbm": 20,
+    "variants_per_invocation": ["olsr", "aodv", "static"],
+    "diagnostics": "--dumpRoutes=true",
+    "seeds_by_graph_id": {"graph_0001": 42, "graph_0002": 47, "graph_0003": 52, "graph_0004": 57, "graph_0005": 62},
+    "graph_run_invocations": 15,
+    "protocol_variant_runs": 45,
+    "estimated_batch_wall_seconds": 33.0,
+    "wall_time_basis": "Phase 5 end-to-end campaign elapsed time: 42 minutes / 1125 graph-run invocations = about 2.24 seconds per invocation; batch estimate rounded to 2.2 seconds each."
+  },
+  "conditions": {
+    "path_life_0.5_stability_0.0": {
+      "trace_cell": "phase5/line/stability",
+      "trace_label": "stability_0.0000",
+      "frame_sha256_by_graph_id": [
+        "c832bfbf60a418451c68738a1c4ce309911d6174c3d21448cf0e148f6820f118",
+        "37e156e50d588a34a0e761fc5d41262c665ed2fc0bf99abfe5d81eb1002b4cef",
+        "522e516ead1b16f6aceb35a68f4e70c425fb6d01bcab00a0f79f215f9df4ba13",
+        "93377fa506de732e54eca73e75f4f79df18a9332c1b007b900ad5e2cb44dffda",
+        "40040dbe1503f1ea916118b9a94f650ffd9087b1012200ada6f79aba8c95913e"
+      ]
+    },
+    "path_life_0.7_stability_0.8": {
+      "trace_cell": "phase5/line/path_life",
+      "trace_label": "path_life_0.7000",
+      "frame_sha256_by_graph_id": [
+        "282feae63d0822c096bc427b9e7fc8705447509d352a72a78761805acd81f603",
+        "50d0bf0130983b038de6a80df63b2d01f5182e073f47d4d77d7953fea3f1dbf0",
+        "025e11083727ef3ee8f6ce2175914fbe3afa5be6894ca9a6cf6d55d4da076086",
+        "512bc9215675ba923a48e5f2050b4d5ee0528ddc2b03b6d57771ce16e9063123",
+        "a889f382865e3aa28b59884869d1b038d42f567258108b5c98b38558c7957894"
+      ]
+    },
+    "path_life_0.9_stability_0.8": {
+      "trace_cell": "phase5/line/path_life",
+      "trace_label": "path_life_0.9000",
+      "frame_sha256_by_graph_id": [
+        "26467e7ca861c156da4dbc95346d2d4d4f4dd98fe0111fd02fe71636f8e20102",
+        "df73c426f893dacbc50c3b6ef2d04627a461a623f3af5cecfa758eeabb5c8567",
+        "322d38018f3fc493e941315fea43b1c7863fd0387a7a466ddd028ed2ad4ea72d",
+        "79028757522e55c7502647934a3a037073c65581aad43c6fdecc2e3082dbd055",
+        "788c8a4cfe8b5296179de47afd64aec7331258749e0a0c347b8809f14f08d993"
+      ]
+    },
+    "path_life_0.5_stability_0.8_reference": {
+      "trace_cell": "phase5/line/path_life",
+      "trace_label": "path_life_0.5000",
+      "frame_sha256_by_graph_id": [
+        "5eb17c660bfd246062eb55eca7b33833d403c74a60413c87058c27ce1201d2ca",
+        "35b73bde9eacb112498d6a444c971ead3b4bc5128c1ac68dc6bc864b23b8d054",
+        "ec2c44e0770aff6b74b028fa61b3c97f40c2074f7f12d25abccb7ef27375629b",
+        "938a534e16861945e14aa23292589d56b6670e5140ece31deaa4f3cba50e9ec2",
+        "6cdd17a59d989f310be2d2b26a0884fd12f3da31a56c7a8ddd8189a9c6c90c2a"
+      ]
+    }
+  },
+  "output_template": "simple-graph-experiments-v2/phase6/6A/runs/<condition>/graph_<id>/",
+  "results_are_new": true,
+  "prior_phase_outputs_are_read_only": true
+}

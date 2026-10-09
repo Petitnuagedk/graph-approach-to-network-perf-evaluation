@@ -1,0 +1,2 @@
+app_tx_packets,sink_rx_total,sink_rx_unique,sink_rx_duplicates,app_ip_no_route_drops,app_ip_route_error_drops,mac_queue_drop_callbacks,mac_tx_drop_callbacks,phy_tx_drop_callbacks,phy_rx_drop_callbacks
+360,345,345,0,0,0,0,0,0,95

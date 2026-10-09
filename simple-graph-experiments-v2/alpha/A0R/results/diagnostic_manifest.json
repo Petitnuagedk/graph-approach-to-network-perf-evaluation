@@ -1,0 +1,24 @@
+{
+  "diagnostics_completed": [
+    "direct timeline seed path",
+    "horizon trials",
+    "parameter coupling",
+    "pool validity",
+    "analytic feasibility count"
+  ],
+  "generator_copy": "/tmp/yadygaga-alpha-a0r-clean",
+  "graph_pair_N92": [
+    "Node_0",
+    "Node_31"
+  ],
+  "protocol_variants": 0,
+  "python": "3.14.4",
+  "source_git_tree": "5040cf6785fbb3a49cb48a7eb79eb7e4a19cbf9f",
+  "source_hashes": {
+    "dynaGraph.py": "e4427662bd3d61e1cfde87756a05b44a6102a331baab4f0a76d07060600a8be0",
+    "frameGenerator.py": "76f5e62514a571359ac74718b80eab97d26d366dbe64179a0069d5e9ceeaed4d",
+    "timelineBlockGenerator.py": "9b1601c9eba81528582f11b290dd35a5e95f18df560346287c4d32e6e9cbf9d7"
+  },
+  "source_content_manifest_sha256": "bd28247d110c5ca09449e9e7ddc2bf618f95de5d41e665cfc1f2a8db2f3d2721",
+  "source_revision": "51b01ac7faa78a494c3baedc560d658f384afe09"
+}

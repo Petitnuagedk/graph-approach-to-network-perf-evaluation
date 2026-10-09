@@ -1,0 +1,14 @@
+{
+  "failures": [],
+  "frames": 60,
+  "generated_traces": 195,
+  "generator_version": "j2-sr-timeline-v2.1",
+  "passed": true,
+  "protocol_variants": 0,
+  "topologies": [
+    "line",
+    "two-lines",
+    "ladder"
+  ],
+  "unique_cells": 39
+}

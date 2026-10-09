@@ -1,0 +1,13 @@
+{
+  "reproduced_seed": 42,
+  "frames_preexport": 60,
+  "frames_serialized": 60,
+  "edge_mismatch_frames": 0,
+  "edge_cell_differences": 0,
+  "generator_order_retention": 0.851063829787234,
+  "generator_order_route_changes": 7,
+  "serialized_label_order_retention": 0.7446808510638298,
+  "serialized_label_order_route_changes": 12,
+  "frames_with_shortest_route_choice_difference": 6,
+  "cause": "Shortest-path tie-breaking depends on node insertion/order; serialization sorts node labels, while generator-side NetworkX traversal follows graph insertion order. The graph edges are identical frame by frame."
+}

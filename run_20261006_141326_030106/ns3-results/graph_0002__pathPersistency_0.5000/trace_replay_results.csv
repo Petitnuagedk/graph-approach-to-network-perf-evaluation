@@ -1,0 +1,4 @@
+scenario,protocol,wall_time_s,cpu_time_s,ip_tx_cb_calls,ip_rx_cb_calls,frame_apply_calls,routing_tx,routing_rx,pdr,goodput_mbps,eed_mean_s,app_tx_pkts,app_rx_pkts,ip_drop_no_route,ip_drop_route_err,phy_tx_drop,phy_rx_drop
+trace,olsr,0.311435,0.311088,1225,2022,60,1225,2022,0.000000,0.000000,0.000000,0,0,0,0,0,6
+trace,aodv,1.644880,1.643447,5098,6519,60,3075,4666,0.214765,0.016519,16.791297,298,64,64,63,0,619
+trace,dsdv,0.498904,0.497994,1825,2284,60,1159,1719,0.000000,0.000000,0.000000,101,0,0,0,0,690

@@ -1,0 +1,11 @@
+mode,warmup_s,tx_packets,rx_packets,pdr,app_ip_no_route_drops,phy_rx_drop_callbacks,source_route_snapshots,source_route_absent_snapshots,source_route_absent_intervals_s,rx_gaps_ge_2s
+replay,0,360,273,0.758333,0,180,43,17,0-15;59-59,
+replay,30,360,360,1.0,0,253,73,1,89-89,
+replay,45,360,360,1.0,0,297,88,1,104-104,
+replay,60,360,269,0.747222,0,337,103,1,119-119,75.011-90.126
+replay,90,360,360,1.0,0,403,133,1,149-149,
+plain,0,360,360,1.0,-1,-1,58,2,0-0;59-59,
+plain,30,360,360,1.0,-1,-1,88,1,89-89,
+plain,45,360,360,1.0,-1,-1,103,1,104-104,
+plain,60,360,360,1.0,-1,-1,118,1,119-119,
+plain,90,360,360,1.0,-1,-1,148,1,149-149,

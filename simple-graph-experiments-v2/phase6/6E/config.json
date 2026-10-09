@@ -1,0 +1,31 @@
+{
+  "analysis_only": true,
+  "command": "/home/hledirach/Documents/J2/.venv/bin/python /home/hledirach/Documents/J2/simple-graph-experiments-v2/phase6/6E/analyze_phase5_corrected.py",
+  "python": "/home/hledirach/Documents/J2/.venv/bin/python (Python 3.14.4)",
+  "ns3_runs_in_this_analysis": 0,
+  "source_campaign": "simple-graph-experiments-v2/phase5",
+  "design": {
+    "realization_records": 225,
+    "replay_epochs_averaged_within_each_dg_realization": 5,
+    "between_realization_sample_size_per_cell": 5,
+    "sample_sd_ddof": 1,
+    "bootstrap_replicates": 5000,
+    "bootstrap_seeds": "SHA-256 digest of stable cell/protocol labels"
+  },
+  "source_sha256": {
+    "simple-graph-experiments-v2/phase6/6A/analyze_6a_corrected.py": "9835057acc4d6757503f827b8a23a98b6f464139f7789dce5d6f6427485b784f",
+    "simple-graph-experiments-v2/phase6/6E/analyze_phase5_corrected.py": "74527074df365d7530c318f23222c94448e8c13b1436c25f4f3e93265e09e201"
+  },
+  "output_sha256": {
+    "simple-graph-experiments-v2/phase6/6A/corrected_6a_realizations.csv": "18428e3eb8b670b612020967c509743a3292ebdb07e04046329f2425c8556ebf",
+    "simple-graph-experiments-v2/phase6/6A/corrected_6a_condition_summary.csv": "8a8472b7271ff7641a1080fe36df7bf5b3c437c8a6120d8d52177f4274bb17ad",
+    "simple-graph-experiments-v2/phase6/6E/phase5_realization_features_pdr.csv": "659e8bfc5435d64d74a77be786db798680a54cb4560a423efcd0be3add56f868",
+    "simple-graph-experiments-v2/phase6/6E/phase5_cell_statistics.csv": "572600d37fe84bc169debc5212a62662d1bb835cec6ee4131cf85bdc04445db6",
+    "simple-graph-experiments-v2/phase6/6E/phase5_paired_differences.csv": "305c5bdf9861707ec7f520cf8c6ddabd1971fa282d3ffad429400646d9abd97a",
+    "simple-graph-experiments-v2/phase6/6E/phase5_feature_regressions.csv": "04d8f46dca6cf6d2ec58bace176dd4421df4d836777bc28f9c1de0002ed57d02",
+    "simple-graph-experiments-v2/phase6/6E/phase5_parameter_runlength_adjustment.csv": "ecdf885d68d17f9e9ed6768f1038524a0ed5cf53e7ef14f053cc953075a59bfe",
+    "simple-graph-experiments-v2/phase6/6E/ladder_aodv_spread.csv": "340193b5b78637b0f3e9f56bd213d231ddf037d43ca9c71b928fcd802afc0021",
+    "simple-graph-experiments-v2/phase6/6E/phase6a_deadline_pdr_summary.csv": "dcc10a96af359c4eff823fbfab44ffdc77e06db3f1345a9a2eb40c16529f2748"
+  },
+  "determinism_check": "Ran the offline analysis twice; all listed generated CSV hashes matched exactly. Historical simulation configs and manifests were not overwritten."
+}

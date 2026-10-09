@@ -1,0 +1,483 @@
+--- a/yadygaga/timelineBlockGenerator.py
++++ b/yadygaga/timelineBlockGenerator.py
+@@ -30,24 +30,17 @@
+     def generate_blocks(self) -> dict:
+-        """
+-        Generate a sequence of booleans representing timeline blocks (legacy behavior)
+-        plus a parallel `path_ids` list labeling up-frames with an integer id.
+-
+-        Returns dict:
+-           { 'timeline': List[bool], 'path_ids': List[Optional[int]] }
+-
+-        path_ids: None for down frames, integer id for up frames. Ids indicate which
+-        up-frames should share the same path identity. Id assignment is deterministic
+-        given `seed` and reflects `pathPersistency`:
+-          - 1.0 -> all frames inside an up run share same id
+-          - 0.0 -> each successive up frame gets a new id
+-          - intermediate -> probability of keeping same id between successive up frames = pathPersistency
+-        """
+-        random.seed(self.seed)
+-        if self.frames <= 0:
++        """Generate an exact-quota SPC timeline and persistent path labels."""
++        frames = self.frames
++        if frames <= 0:
++            self.last_timeline = []
++            self.last_path_ids = []
+             return {"timeline": [], "path_ids": []}
+ 
+-        # reuse existing logic to compute boolean timeline
+-        up_count = int(round(self.frames * self.path_life))
+-        up_count = max(0, min(self.frames, up_count))
+-        down_count = self.frames - up_count
++        if not 0.0 <= self.path_life <= 1.0:
++            raise ValueError("path_life must be in [0, 1]")
++        if not 0.0 <= self.stability <= 1.0:
++            raise ValueError("stability must be in [0, 1]")
++
++        rng = random.Random(self.seed)
++        up_count = max(0, min(frames, int(round(frames * self.path_life))))
++        down_count = frames - up_count
+ 
+@@ -55,193 +48,50 @@
+             timeline = [True] * up_count + [False] * down_count
+-            random.shuffle(timeline)
+-            # assign path_ids based on persistence rule applied on successive True frames
+-            path_ids = [None] * len(timeline)
+-            next_pid = 0
+-            last_pid = None
+-            for i, st in enumerate(timeline):
+-                if st:
+-                    if last_pid is None:
+-                        pid = next_pid
+-                        next_pid += 1
+-                    else:
+-                        if random.random() < self.pathPersistency:
+-                            pid = last_pid
+-                        else:
+-                            pid = next_pid
+-                            next_pid += 1
+-                    path_ids[i] = pid
+-                    last_pid = pid
+-                else:
+-                    last_pid = None
+-            self.last_timeline = timeline
+-            self.last_path_ids = path_ids
+-            return {"timeline": timeline, "path_ids": path_ids}
+-
+-        # trivial cases
+-        if up_count == 0:
+-            timeline = [False] * self.frames
+-            path_ids = [None] * self.frames
+-            self.last_timeline = timeline
+-            self.last_path_ids = path_ids
+-            return {"timeline": timeline, "path_ids": path_ids}
+-        if down_count == 0:
+-            timeline = [True] * self.frames
+-            # If all frames up, decide id assignment according to pathPersistency
+-            path_ids = [None] * self.frames
+-            next_pid = 0
+-            last_pid = None
+-            for i in range(self.frames):
+-                if last_pid is None:
+-                    pid = next_pid
+-                    next_pid += 1
+-                else:
+-                    if random.random() < self.pathPersistency:
+-                        pid = last_pid
+-                    else:
+-                        pid = next_pid
+-                        next_pid += 1
+-                path_ids[i] = pid
+-                last_pid = pid
+-            self.last_timeline = timeline
+-            self.last_path_ids = path_ids
+-            return {"timeline": timeline, "path_ids": path_ids}
+-
+-        # determine number of up blocks based on stability
+-        # min_up_blocks = 1, max_up_blocks = up_count (each up frame isolated)
+-        min_up_blocks = 1
+-        max_up_blocks = up_count
+-        up_blocks = int(
+-            round(
+-                min_up_blocks
+-                + (1.0 - float(self.stability)) * (max_up_blocks - min_up_blocks)
+-            )
+-        )
+-        up_blocks = max(min_up_blocks, min(max_up_blocks, up_blocks))
+-
+-        # helper to split a total into `parts` positive integers (as even as possible)
+-        def _split_counts(total: int, parts: int) -> List[int]:
+-            parts = max(1, parts)
+-            base = total // parts
+-            rem = total % parts
+-            sizes = [base + (1 if i < rem else 0) for i in range(parts)]
+-            # ensure each part at least 1 if possible
+-            for i in range(len(sizes)):
+-                if sizes[i] == 0:
+-                    sizes[i] = 1
+-            # adjust if we increased sum beyond total (rare)
+-            while sum(sizes) > total:
+-                for j in range(len(sizes) - 1, -1, -1):
+-                    if sizes[j] > 1 and sum(sizes) > total:
+-                        sizes[j] -= 1
+-            return sizes
+-
+-        # decide number of down blocks
+-        # minimal internal down blocks between up blocks is up_blocks - 1
+-        # possible down blocks are in [max(1, up_blocks - 1), up_blocks + 1]
+-        min_down_blocks = max(1, up_blocks - 1)
+-        max_down_blocks = min(
+-            up_blocks + 1, down_count
+-        )  # cannot exceed count (each block >=1)
+-        if max_down_blocks < min_down_blocks:
+-            # fallback: force min_down_blocks but will merge later
+-            max_down_blocks = min_down_blocks
+-
+-        if up_blocks == 1:
+-            # single up block: either place on edge (one down block) or in middle (two down blocks)
+-            if down_count == 1:
+-                down_blocks = 1
+-            elif down_count >= 2:
+-                # random placement: half chance middle (2 down blocks), half chance edge (1 down block)
+-                if random.choice([True, False]):
+-                    down_blocks = 2
+-                else:
+-                    down_blocks = 1
++            rng.shuffle(timeline)
++        elif up_count == 0:
++            timeline = [False] * frames
++        elif down_count == 0:
++            timeline = [True] * frames
++        else:
++            up_runs = int(round(1 + (1.0 - float(self.stability)) * (up_count - 1)))
++            up_runs = max(1, min(up_count, up_runs))
++            if up_runs > down_count + 1:
++                raise ValueError(
++                    f"Infeasible exact timeline: up_count={up_count}, "
++                    f"up_runs={up_runs}, down_count={down_count}"
++                )
++
++            min_down_runs = max(1, up_runs - 1)
++            max_down_runs = min(down_count, up_runs + 1)
++            down_runs = rng.randint(min_down_runs, max_down_runs)
++
++            def composition(total: int, parts: int) -> List[int]:
++                if parts == 1:
++                    return [total]
++                cuts = sorted(rng.sample(range(1, total), parts - 1))
++                points = [0, *cuts, total]
++                return [points[i + 1] - points[i] for i in range(parts)]
++
++            up_sizes = composition(up_count, up_runs)
++            down_sizes = composition(down_count, down_runs)
++            if down_runs == up_runs - 1:
++                state_up = True
++            elif down_runs == up_runs + 1:
++                state_up = False
+             else:
+-                down_blocks = 1
+-            down_blocks = min(down_blocks, down_count)
+-        else:
+-            # multiple up blocks: prefer internal down blocks only (start and end with up)
+-            preferred = up_blocks - 1
+-            if preferred <= max_down_blocks:
+-                down_blocks = preferred
+-            else:
+-                down_blocks = max_down_blocks
+-
+-        down_blocks = max(min_down_blocks, min(max_down_blocks, down_blocks))
+-
+-        # generate sizes
+-        up_sizes = _split_counts(up_count, up_blocks)
+-        down_sizes = _split_counts(down_count, down_blocks)
+-
+-        # build sequence of states (blocks) by interleaving
+-        blocks: List[Tuple[bool, int]] = []
+-
+-        # Decide starting state to fit number of blocks: possible patterns depend on counts
+-        # If down_blocks == up_blocks + 1 -> must start with down and end with down
+-        # If down_blocks == up_blocks - 1 -> start and end with up
+-        # If equal -> start with either; prefer starting with up for visibility
+-        if down_blocks == up_blocks + 1:
+-            # pattern: D U D U ... D (starts with down)
+-            d_idx = 0
+-            u_idx = 0
+-            for i in range(down_blocks + up_blocks):
+-                if i % 2 == 0:
+-                    # down
+-                    blocks.append((False, down_sizes[d_idx]))
+-                    d_idx += 1
+-                else:
+-                    blocks.append((True, up_sizes[u_idx]))
+-                    u_idx += 1
+-        elif down_blocks == up_blocks - 1:
+-            # pattern: U D U D ... U (starts with up and ends with up)
+-            u_idx = 0
+-            d_idx = 0
+-            for i in range(down_blocks + up_blocks):
+-                if i % 2 == 0:
+-                    blocks.append((True, up_sizes[u_idx]))
+-                    u_idx += 1
+-                else:
+-                    blocks.append((False, down_sizes[d_idx]))
+-                    d_idx += 1
+-        else:
+-            # down_blocks == up_blocks or single up block cases where we may want edge/middle placement
+-            # prefer putting up blocks separated by downs and start with up
+-            u_idx = 0
+-            d_idx = 0
+-            start_with_up = True
+-            if up_blocks == 1 and down_blocks == 1:
+-                # when single up and single down, randomly choose order (edge placement)
+-                start_with_up = random.choice([True, False])
+-            for i in range(down_blocks + up_blocks):
+-                if start_with_up:
+-                    if i % 2 == 0:
+-                        blocks.append((True, up_sizes[u_idx]))
+-                        u_idx += 1
+-                    else:
+-                        blocks.append((False, down_sizes[d_idx]))
+-                        d_idx += 1
+-                else:
+-                    if i % 2 == 0:
+-                        blocks.append((False, down_sizes[d_idx]))
+-                        d_idx += 1
+-                    else:
+-                        blocks.append((True, up_sizes[u_idx]))
+-                        u_idx += 1
+-
+-        # build timeline from blocks
+-        timeline: List[bool] = []
+-        for st, size in blocks:
+-            timeline.extend([bool(st)] * size)
+-
+-        # final adjustment to ensure exact frame count
+-        if len(timeline) > self.frames:
+-            timeline = timeline[: self.frames]
+-        elif len(timeline) < self.frames:
+-            # pad with last state
+-            if timeline:
+-                timeline.extend([timeline[-1]] * (self.frames - len(timeline)))
+-            else:
+-                timeline = [False] * self.frames
+-
+-        # After timeline computed: assign path_ids according to pathPersistency
++                state_up = rng.choice((True, False))
++
++            timeline = []
++            up_index = down_index = 0
++            while up_index < up_runs or down_index < down_runs:
++                if state_up and up_index < up_runs:
++                    timeline.extend([True] * up_sizes[up_index])
++                    up_index += 1
++                elif not state_up and down_index < down_runs:
++                    timeline.extend([False] * down_sizes[down_index])
++                    down_index += 1
++                state_up = not state_up
++
++        # Keep path identity randomness on a separate seeded stream so it cannot
++        # change the Boolean timeline produced for this seed.
++        label_rng = random.Random((int(self.seed) if self.seed is not None else 0) ^ 0x5A17)
+         path_ids = [None] * len(timeline)
+@@ -249,19 +99,11 @@
+         last_pid = None
+-        for i, st in enumerate(timeline):
+-            if st:
+-                if last_pid is None:
+-                    pid = next_pid
+-                    next_pid += 1
+-                else:
+-                    # print(random.random(), self.pathPersistency)
+-                    if random.random() < self.pathPersistency:
+-                        pid = last_pid
+-                    else:
+-                        pid = next_pid
+-                        next_pid += 1
+-                path_ids[i] = pid
+-                last_pid = pid
+-            else:
++        for index, is_up in enumerate(timeline):
++            if not is_up:
+                 last_pid = None
+-            # print(i, st, path_ids[i], last_pid)
++                continue
++            if last_pid is None or label_rng.random() >= self.pathPersistency:
++                last_pid = next_pid
++                next_pid += 1
++            path_ids[index] = last_pid
++
+         self.last_timeline = timeline
+@@ -325,3 +167,3 @@
+         """
+-        random.seed(self.seed)
++        rng = random.Random(self.seed)
+         if self.frames <= 0 or self.n_pairs <= 0:
+@@ -351,3 +193,3 @@
+                     run = min(
+-                        remaining, max(1, int(random.expovariate(1.0 / max(1, avg))))
++                        remaining, max(1, int(rng.expovariate(1.0 / max(1, avg))))
+                     )
+@@ -386,3 +228,3 @@
+                 tl2 = [False] * self.frames
+-                up_positions = set(random.sample(range(self.frames), up_count))
++                up_positions = set(rng.sample(range(self.frames), up_count))
+                 for p in up_positions:
+@@ -418,3 +260,3 @@
+                         # decide whether to keep same id
+-                        if random.random() <= self.pathPersistency:
++                        if rng.random() <= self.pathPersistency:
+                             # keep same id
+
+--- a/yadygaga/frameGenerator.py
++++ b/yadygaga/frameGenerator.py
+@@ -27,2 +27,3 @@
+         pathPersistency: float = 0.0,
++        seed: int = 0,
+     ) -> None:
+@@ -37,2 +38,3 @@
+         assert 0.0 <= pathPersistency <= 1.0
++        rng = random.Random(seed)
+         edges = list(limited_G.edges())
+@@ -46,3 +48,3 @@
+             for e in edges:
+-                if random.random() < p_edge:
++                if rng.random() < p_edge:
+                     H.add_edge(*e)
+
+--- a/yadygaga/dynaGraph.py
++++ b/yadygaga/dynaGraph.py
+@@ -35,18 +35,5 @@
+ 
+-    def buildDynaGraph(self, timeline, path_up, path_down):
+-        """
+-        Given a timeline (legacy: List[bool] OR new: dict {'timeline':..., 'path_ids':...})
+-        and two sets of frames (path_up grouped as list-of-groups, path_down flat list),
+-        pick frames according to the timeline.
+-
+-        New behavior for SPC when timeline is labeled:
+-         - `path_up` is expected to be a list of groups (each group is a list of frames sharing same s->d path).
+-         - timeline may carry `path_ids` distinguishing desired persistent path identities across up frames.
+-         - we map timeline path_id -> chosen group index (first occurrence chooses a group randomly,
+-           subsequent frames with same path_id reuse the same group).
+-        Legacy behavior (flat path_up list) is still supported.
+-        """
+-        rnd = random.Random()
+-
+-        # accept timeline as either dict or list
++    def buildDynaGraph(self, timeline, path_up, path_down, seed: int = 0):
++        """Assemble timeline states from candidate pools using a seeded RNG."""
++        rnd = random.Random(seed)
+         if isinstance(timeline, dict):
+@@ -58,32 +45,17 @@
+ 
+-        # detect if path_up is grouped (list of lists) or flat (list of graphs)
+-        grouped_up = False
+-        if (
+-            path_up
+-            and isinstance(path_up, list)
+-            and any(isinstance(x, list) for x in path_up)
+-        ):
+-            grouped_up = True
+-
+-        # prepare pools
+-        if grouped_up:
+-            groups = path_up  # list of lists
+-            n_groups = len(groups)
+-        else:
+-            flat_up = list(path_up) if path_up else []
+-            n_groups = len(flat_up)
+-
++        grouped_up = bool(
++            path_up and isinstance(path_up, list)
++            and any(isinstance(group, list) for group in path_up)
++        )
++        groups = path_up if grouped_up else []
++        flat_up = list(path_up) if not grouped_up and path_up else []
+         down_pool = list(path_down) if path_down else []
+-
+-        # mapping timeline path id -> group index (for grouped_up case)
+         pid_to_group = {}
+-
+         self.DynamicGraph = []
+-        for idx, state in enumerate(tl):
++
++        for index, state in enumerate(tl):
+             if state:
+-                # up frame requested
+-                pid = path_ids[idx] if idx < len(path_ids) else None
++                pid = path_ids[index] if index < len(path_ids) else None
+                 if grouped_up:
+-                    if n_groups == 0:
+-                        # no up groups available: fallback to empty graph
++                    if not groups:
+                         self.DynamicGraph.append(nx.Graph())
+@@ -91,32 +63,18 @@
+                     if pid is None:
+-                        # no label: pick any group at random
+-                        gid = rnd.randrange(n_groups)
++                        group_index = rnd.randrange(len(groups))
++                    elif pid in pid_to_group:
++                        group_index = pid_to_group[pid]
+                     else:
+-                        if pid in pid_to_group:
+-                            gid = pid_to_group[pid]
+-                        else:
+-                            # choose a group for this path-id (allow reuse)
+-                            gid = rnd.randrange(n_groups)
+-                            pid_to_group[pid] = gid
+-                    # pick a frame from the chosen group
+-                    group_pool = groups[gid]
+-                    if group_pool:
+-                        gf = rnd.choice(group_pool)
+-                        self.DynamicGraph.append(gf)
+-                    else:
+-                        # empty group fallback
+-                        self.DynamicGraph.append(nx.Graph())
++                        group_index = rnd.randrange(len(groups))
++                        pid_to_group[pid] = group_index
++                    group = groups[group_index]
++                    self.DynamicGraph.append(rnd.choice(group) if group else nx.Graph())
+                 else:
+-                    # flat up pool
+-                    if not flat_up:
+-                        self.DynamicGraph.append(nx.Graph())
+-                    else:
+-                        self.DynamicGraph.append(rnd.choice(flat_up))
++                    self.DynamicGraph.append(
++                        rnd.choice(flat_up) if flat_up else nx.Graph()
++                    )
+             else:
+-                # down frame
+-                if down_pool:
+-                    self.DynamicGraph.append(rnd.choice(down_pool))
+-                else:
+-                    # fallback to empty graph
+-                    self.DynamicGraph.append(nx.Graph())
++                self.DynamicGraph.append(
++                    rnd.choice(down_pool) if down_pool else nx.Graph()
++                )
+         return self.DynamicGraph
+@@ -195,3 +153,3 @@
+         """
+-        random.seed(seed)
++        rng = random.Random(seed if seed is not None else 0)
+         _log("Generating unique SPCDynamicGraph set with target_count = ", target_count)
+@@ -273,3 +231,3 @@
+             while len(results) < target_count and attempts < max_attempts:
+-                indices = [random.randrange(s) for s in sizes]
++                indices = [rng.randrange(s) for s in sizes]
+                 frames_seq = [pools[i][indices[i]] for i in range(frames)]
+@@ -383,3 +341,3 @@
+                 for _ in range(sample_n):
+-                    assignment = tuple(random.randrange(n_groups) for _ in range(m))
++                    assignment = tuple(rng.randrange(n_groups) for _ in range(m))
+                     pools_a = pools_for_assignment(assignment)
+@@ -442,6 +400,6 @@
+             else:
+-                assignment = tuple(random.randrange(n_groups) for _ in range(m))
++                assignment = tuple(rng.randrange(n_groups) for _ in range(m))
+             pools_a = pools_for_assignment(assignment)
+             # pick random index from each pool
+-            indices = [random.randrange(len(p)) for p in pools_a]
++            indices = [rng.randrange(len(p)) for p in pools_a]
+             frames_seq = [pools_a[i][indices[i]] for i in range(frames)]

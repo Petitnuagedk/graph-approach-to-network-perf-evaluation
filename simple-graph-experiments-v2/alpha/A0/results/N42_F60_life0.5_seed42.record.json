@@ -1,0 +1,52 @@
+{
+  "N": 42,
+  "baseline_hops": 6,
+  "connectivity_bits": "111110000011111000001111000001111000001111000001111000001111",
+  "destination": "Node_16",
+  "frames": 60,
+  "frequency": 2,
+  "generation_wall_seconds": 0.050852401996962726,
+  "mean_hops_when_up": 6.833333333333333,
+  "mean_up_run_frames": 4.285714285714286,
+  "p_edge": 0.5,
+  "pathPersistency": 0.9,
+  "path_down_pool_frames": 38,
+  "path_life_requested": 0.5,
+  "path_up_pool_frames": 462,
+  "path_up_pool_groups": 257,
+  "process_peak_rss_bytes": 96460800,
+  "process_peak_rss_kib": 94200,
+  "realized_up_count": 30,
+  "realized_uptime": 0.5,
+  "roles": [
+    "scale_timing"
+  ],
+  "run_index": 1,
+  "seed": 42,
+  "shorter_than_skeleton_path_frames": 0,
+  "source": "Node_0",
+  "source_hashes": {
+    "dynaGraph.py": "e4427662bd3d61e1cfde87756a05b44a6102a331baab4f0a76d07060600a8be0",
+    "frameGenerator.py": "76f5e62514a571359ac74718b80eab97d26d366dbe64179a0069d5e9ceeaed4d",
+    "timelineBlockGenerator.py": "9b1601c9eba81528582f11b290dd35a5e95f18df560346287c4d32e6e9cbf9d7"
+  },
+  "source_revision": "51b01ac7faa78a494c3baedc560d658f384afe09",
+  "stability": 0.8,
+  "timeline_up_count_requested": 30,
+  "timeline_up_ratio": 0.5,
+  "trace_bytes": 75654,
+  "trace_file": "N42_F60_life0.5_seed42.trace.json",
+  "trace_sha256": "841e4a0f456450f724b56c039ff4e55af15b5c3d5b852bccf0abba0f44cbf736",
+  "transitions": 12,
+  "trials": 500,
+  "up_runs": [
+    5,
+    5,
+    4,
+    4,
+    4,
+    4,
+    4
+  ],
+  "wrapper_sha256": "eafb56abf7482f90aed77f56ea2a9e19fc198156c9fb02efc90dc3e631c6cbec"
+}

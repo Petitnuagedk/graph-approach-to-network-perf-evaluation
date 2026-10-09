@@ -1,0 +1,3 @@
+Finished executing the following commands:
+/usr/bin/cmake --build /home/hledirach/Documents/sp1-sp2/cmake-cache -j 7 --target scratch_graph-run
+BUILD_STARTUP_CHECK_SECONDS=0.60

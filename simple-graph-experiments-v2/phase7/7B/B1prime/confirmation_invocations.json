@@ -1,0 +1,20 @@
+[
+  {
+    "cwd": "/home/hledirach/Documents/sp1-sp2",
+    "command": "./ns3 run \"graph-run --framesCsv=/home/hledirach/Documents/J2/simple-graph-experiments-v2/phase7/7B/B1/fixtures/alternating_sr_60.csv --outDir=/home/hledirach/Documents/J2/simple-graph-experiments-v2/phase7/7B/B1prime/runs/downloss_125 --routing=static --flows=S:R --dataRate=1Mbps --packetSize=1024 --lossThresholdDb=150 --channelProfile=v2 --defaultLossDb=1000000 --txPowerDbm=20 --linkUpLossDb=10 --linkDownLossDb=125 --fps=1 --seed=42 --warmup=0 --warmupMode=first --dumpRoutes=true --staticOracleMode=usable\"",
+    "down_loss_db": 125,
+    "protocol_variants": 1
+  },
+  {
+    "cwd": "/home/hledirach/Documents/sp1-sp2",
+    "command": "./ns3 run \"graph-run --framesCsv=/home/hledirach/Documents/J2/simple-graph-experiments-v2/phase7/7B/B1/fixtures/alternating_sr_60.csv --outDir=/home/hledirach/Documents/J2/simple-graph-experiments-v2/phase7/7B/B1prime/runs/downloss_200 --routing=static --flows=S:R --dataRate=1Mbps --packetSize=1024 --lossThresholdDb=150 --channelProfile=v2 --defaultLossDb=1000000 --txPowerDbm=20 --linkUpLossDb=10 --linkDownLossDb=200 --fps=1 --seed=42 --warmup=0 --warmupMode=first --dumpRoutes=true --staticOracleMode=usable\"",
+    "down_loss_db": 200,
+    "protocol_variants": 1
+  },
+  {
+    "cwd": "/home/hledirach/Documents/sp1-sp2",
+    "command": "./ns3 run \"graph-run --framesCsv=/home/hledirach/Documents/J2/simple-graph-experiments-v2/phase7/7B/B1/fixtures/alternating_sr_60.csv --outDir=/home/hledirach/Documents/J2/simple-graph-experiments-v2/phase7/7B/B1prime/runs/downloss_1000000 --routing=static --flows=S:R --dataRate=1Mbps --packetSize=1024 --lossThresholdDb=150 --channelProfile=v2 --defaultLossDb=1000000 --txPowerDbm=20 --linkUpLossDb=10 --linkDownLossDb=1000000 --fps=1 --seed=42 --warmup=0 --warmupMode=first --dumpRoutes=true --staticOracleMode=usable\"",
+    "down_loss_db": 1000000,
+    "protocol_variants": 1
+  }
+]

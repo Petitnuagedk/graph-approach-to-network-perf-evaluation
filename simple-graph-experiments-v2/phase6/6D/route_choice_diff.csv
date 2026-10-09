@@ -1,0 +1,7 @@
+frame,generator_order_shortest_route,serialized_label_order_shortest_route
+40,S -> A1 -> B1 -> B2 -> B3 -> R,S -> A1 -> A2 -> B2 -> B3 -> R
+41,S -> A1 -> B1 -> B2 -> B3 -> R,S -> A1 -> A2 -> B2 -> B3 -> R
+46,S -> A1 -> A2 -> B2 -> B3 -> R,S -> A1 -> A2 -> A3 -> B3 -> R
+53,S -> A1 -> B1 -> B2 -> B3 -> R,S -> A1 -> A2 -> B2 -> B3 -> R
+55,S -> A1 -> B1 -> B2 -> B3 -> R,S -> A1 -> A2 -> B2 -> B3 -> R
+56,S -> A1 -> B1 -> B2 -> B3 -> R,S -> A1 -> A2 -> B2 -> B3 -> R

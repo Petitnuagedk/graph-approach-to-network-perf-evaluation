@@ -1,0 +1,33 @@
+--- a4_0c/graph-run.pre_edit.cc
++++ a4_0c/graph-run.patched.cc
+@@ -670,18 +670,26 @@
+     if (ip.GetProtocol() != 17) return g_activeRouting + "_other";
+     UdpHeader udp;
+     if (!payload->PeekHeader(udp)) return g_activeRouting + "_other";
++    if (g_activeRouting == "olsr" && udp.GetSourcePort() != 698 &&
++        udp.GetDestinationPort() != 698) return "olsr_other";
+     payload->RemoveHeader(udp);
+     if (g_activeRouting == "olsr") {
++        if (payload->GetSize() < 4) return "olsr_other";
+         olsr::PacketHeader packetHeader;
+-        olsr::MessageHeader messageHeader;
+-        if (payload->RemoveHeader(packetHeader) && payload->PeekHeader(messageHeader)) {
+-            switch (messageHeader.GetMessageType()) {
++        if (!payload->PeekHeader(packetHeader) || packetHeader.GetPacketLength() < 16 ||
++            packetHeader.GetPacketLength() > payload->GetSize()) return "olsr_other";
++        payload->RemoveHeader(packetHeader);
++        uint8_t messageType = 0;
++        if (payload->GetSize() == 0 || payload->CopyData(&messageType, 1) != 1 ||
++            messageType < olsr::MessageHeader::HELLO_MESSAGE ||
++            messageType > olsr::MessageHeader::HNA_MESSAGE) return "olsr_other";
++        switch (messageType) {
+             case olsr::MessageHeader::HELLO_MESSAGE: return "olsr_hello";
+             case olsr::MessageHeader::TC_MESSAGE: return "olsr_tc";
+             case olsr::MessageHeader::MID_MESSAGE: return "olsr_mid";
+             case olsr::MessageHeader::HNA_MESSAGE: return "olsr_hna";
+-            }
+         }
++        return "olsr_other";
+     } else if (g_activeRouting == "aodv") {
+         aodv::TypeHeader type;
+         if (payload->RemoveHeader(type)) {

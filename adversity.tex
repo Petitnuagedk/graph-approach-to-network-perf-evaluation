@@ -1,0 +1,43 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=1.7cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+
+\title{\vspace{-1.5em}\textbf{A Graph-Independent Adversity Metric for Time-Varying Network Connectivity}\vspace{-1.5em}}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\textbf{Abstract.} We define a scalar network adversity $\mathcal{A}$ that summarizes the dynamics and the health of a time-varying network. The metric is computed from a single realized trace, requires only the node count and the sequence of up-link graphs, is unitless once the frame period is adopted as the reference time, and scales linearly in the number of nodes for fixed intensive quantities. Dynamics are measured over all node pairs and all shortest paths they admit. Health combines global efficiency with the centralization of the largest connected component.
+
+%\textbf{1. Motivation.} A quantity of the form $N\,s/\bar{R}$, where $s$ is a requested stability and $\bar{R}$ a normalized reachability, contains no time axis. Scaling all fragment durations by a common factor leaves $s$ and $\bar{R}$ unchanged, so such a quantity cannot distinguish scenarios that differ only in time scale. Requested parameters also need not match the realized trace. The definition below therefore uses only realized quantities.
+
+\textbf{1. Definition.} Let $V$ be a node set with $N=|V|$, and let $G_t=(V,E_t)$, $t=1,\dots,F$, be the graph of up links in frame $t$. The frame period $\Delta$ is the reference time, so all rates are counts per frame. Let $\mathcal{P}$ denote the set of unordered node pairs, with $|\mathcal{P}|=N(N-1)/2$. For a pair $p=\{i,j\}$ in frame $t$, let $\Pi_t(p)\subseteq E_t$ be the set of edges lying on at least one shortest $i$--$j$ path in $G_t$, with $\Pi_t(p)=\varnothing$ when $i$ and $j$ are disconnected. The event indicator is $e_t(p)=\mathbf{1}[\Pi_t(p)\neq\Pi_{t+1}(p)]$, which registers any change in the set of admissible shortest routes, including the appearance or loss of connectivity. The network event rate is
+\begin{equation}
+\lambda=\frac{1}{(F-1)\,|\mathcal{P}|}\sum_{p\in\mathcal{P}}\sum_{t=1}^{F-1} e_t(p)\in[0,1].
+\end{equation}
+For each frame, let $\mathrm{LCC}_t$ be the largest connected component of $G_t$, $n_t=|\mathrm{LCC}_t|$, and $d_t(i,j)$ the hop distance in $G_t$ with $1/\infty=0$. Global efficiency is
+\begin{equation}
+E_{\mathrm{glob}}(G_t)=\frac{1}{N(N-1)}\sum_{i\neq j}\frac{1}{d_t(i,j)},
+\end{equation}
+and the Freeman degree centralization of the largest component is
+\begin{equation}
+C_D(\mathrm{LCC}_t)=\frac{\sum_{v\in \mathrm{LCC}_t}\big(d_{\max}-d_v\big)}{(n_t-1)(n_t-2)}\quad(n_t\ge 3),
+\end{equation}
+with $C_D=0$ otherwise, so that $C_D\in[0,1]$. The per-frame health is $H_t=E_{\mathrm{glob}}(G_t)\,\big(1-C_D(\mathrm{LCC}_t)\big)$, and its time average is $\bar{H}=\frac{1}{F}\sum_{t=1}^{F}H_t$. The network adversity is
+\begin{equation}
+\mathcal{A}=N\,\big[\lambda+(1-\bar{H})\big].
+\end{equation}
+The health deficit is added rather than multiplied by $\lambda$, so that a static partially disconnected network receives a positive value.
+
+\textbf{2. Properties.} The metric is unitless, since $\lambda$ is a per-frame, per-pair fraction and $\bar{H}$ is dimensionless. Both intensive terms are bounded in $[0,1]$, so $\mathcal{A}$ is linear in $N$ for fixed $\lambda$ and $\bar{H}$. A connected static network gives $\lambda=0$ and $\bar{H}=1$, hence $\mathcal{A}=0$. A static network with any fragmentation gives $\mathcal{A}>0$. The definition of $\lambda$ uses edge sets of shortest-path structures rather than route labels, so it is invariant under relabeling of nodes. Multiplying all fragment durations by $k>1$ at fixed frame period reduces $\lambda$ approximately by $1/k$. Health is evaluated per frame before averaging, so that a time average does not blend the centralization of different topologies.
+
+\textbf{3. Limitations.} The unit deficit weight is an assumption, not a derivation, and requires a sensitivity analysis. The event indicator is strict: any change in the set of shortest-path edges counts, even when the route used by a given protocol survives. Dense graphs with many equal-length shortest paths may therefore register events from small rewirings. The per-pair normalization dilutes $\lambda$ in networks where most pairs are never affected, and it makes $\lambda$ intensive, which is the reason the size factor $N$ enters explicitly. Centralization is computed on the largest component only. The source--destination reachability fraction is not part of $\mathcal{A}$ and should be reported alongside it as a validation covariate. Validity as a predictor of measured performance degradation remains to be tested, and each value describes one realization.
+
+\end{document}

@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "yadygaga"
+version = "0.0.5"
+description = "Dynamic graph generator based on a static graph and user parameters."
+authors = ["Hugo Le Dirach <hugo.le_dirach@onera.fr>"]
+license = "GPL-2.0-or-later"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+networkx = "^2.5"
+numpy = "^1.21"
+matplotlib = "^3.4"
+python-louvain = "^0.15"  # used by dynamic community detection (optional)
+
+[tool.poetry.dev-dependencies]
+# add development/test deps here as needed
+pytest = "^7.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

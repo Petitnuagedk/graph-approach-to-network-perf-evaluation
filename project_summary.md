@@ -1,0 +1,63 @@
+# Project summary: routing under dynamic topology (ns-3 / YaDyGaGa)
+
+Research question: how do topology and link dynamics affect routing-protocol (OLSR, AODV, DSDV) performance in ns-3? Two tracks: **Phases 0-7** (small hand-built topologies: line, two-lines, ladder) and **Alpha** (large generated graphs: geodesic, RGG, Watts-Strogatz, Erdos-Renyi, Barabasi-Albert; N = 42, 92, 162). Alpha is a prerequisite study before a future "Beta" dynamic-link campaign on large graphs.
+
+## Standing method (applies to every stage from A1 onward)
+- Gated order: each stage needs a `prereg.md` with numeric thresholds for every gate, written and hashed before running. Gates must be able to fail; post-result decisions are labelled "written after `<stage>` results" and are descriptive, not gates.
+- Budget unit: **protocol variants** (one graph-run invocation x one routing variant). Alpha cap: 300. Every attempt (success, failure, crash, timeout) counts; no retries, no silent substitution.
+- Historical artifacts are never edited. Corrections are new amendments/reports layered on top; original failures stay on record.
+- No protocol ranking, no "ceiling" language, no PDR normalization to a static reference. Sample SD uses `ddof=1`; replay epochs/seeds are never treated as independent realizations.
+- Recent efficiency rules (from A2h onward): one prereg per stage, per-run data in CSV only, one `MANIFEST.sha256` per stage, reports capped at 80-150 lines, commands in `run.sh`, one `gates.md` entry per stage, shared limitations centralized in `alpha/LIMITATIONS.md` (cited, not restated).
+
+## Phases 0-7 (small topologies) - key findings
+- **Phase 0-1**: OLSR's apparent zero PDR was mostly a warm-up artifact (OLSR needs ~10.6 s, DSDV ~15 s to get a first route). PDR was also counted after routing, overstating it.
+- **Phase 2**: Fixed PDR denominator (count at UdpClient Tx), added trace oracle and control-overhead metrics.
+- **Phase 3-4**: Varied fps (temporal scale); no robust frame-rate effect once replicated across 5 realizations.
+- **Phase 5**: Large sweep (1,125 runs) of path life / stability / persistency x 3 topologies. Path life drives PDR; stability/persistency effects unclear.
+- **Phase 6**: Diagnosed Phase 5 problems: static-route baseline is NOT a ceiling; DSDV has an unexplained 15 s outage on an all-up static network and stays excluded; the 5 "graph seeds" per Phase 5 cell produced **identical** S-R timelines, so effective sample size per cell is 1, not 5.
+- **Phase 7**: Audited traces; found Phase 5's center setting was run 3x per topology (not independent); 6A was line-topology only. Validated the legacy baseline (B0) after clarifying frame accounting (60 source + 45 warm-up = 105 frames). **7B/7C (no-interpolation channel, static-oracle gate) status was last recorded as incomplete (B1/B2 open)** - must be re-checked in gates.md before any Alpha work that depends on it.
+
+## Alpha (large graphs) - stage by stage
+
+**A0** (generator capability audit): the pinned YaDyGaGa source **failed seed diversity** (5 seeds -> 1 unique S-R timeline). Path-life fidelity and generation speed passed.
+
+**A0-R2**: diagnosed the sampler (non-uniform over the exact schedule support) and built an isolated **patched** copy with an exact-uniform sampler, selectable `legacy`/`patched` behavior. Patched copy passes all frozen A0 gates. Random-link fraction/lifetime remain **not usable** (edges are redrawn i.i.d. every frame, no cross-frame memory).
+
+**A1** (graph families): 39 connected graphs (3 geodesic deterministic + 4 random families x 3 sizes x 3 realizations) generated and characterized (covariates, mismatch tables, WS calibration). Clean after fixing two preregistration bookkeeping errors (39 not 42 graphs; disjoint seed blocks).
+
+**A2** (trace feasibility, prereg only at first): registered a diversity criterion (`D >= .30`) that the user later judged circular (chosen after seeing it always pass). Also flagged: stability fixed at 0.9 was a convenience, not well-motivated; probe pairs chosen by max shortest-path multiplicity may not generalize; multi-pair (MPC) constrained-path support is weak.
+
+**A2 execution** (`a2_report.md`): A2a/b/c passed; A2d item 1 (per-edge memory sampler, isolated) passed; A2d item 2 (multi-pair) largely **failed** for disjoint pairs (3/42) though shared-source pairs passed (42/42); A2d item 4 (U/K decoupling interface) proposal-only; A2e (Edge-Markovian fallback) **failed** its frozen marginal/duration tolerances at L=8.
+
+**A2f** (user-directed revision): replaced the stability-maximizes-K rule, added a `(U,K)`-direct `uk` interface, diagnosed the MPC failure. A2f-1 (structural rho boundary) PASS; A2f-2 (`uk` interface + exact-uniform sampling) PASS; A2f-3 (life/up-run decoupling demo) PASS (Spearman ~ -0.10 vs +1.0 under the old stability rule) but the result is partly "by construction" of the tested grid, and high life (>=0.9) still structurally forces long up-runs (mean up-run >= U/(D+1)); A2f-4 (MPC diagnosis) **mixed/inconclusive**: fidelity drops sharply as `p_edge` rises (30/30 at p=.3, 13/30 at p=.5, 0/15 "00" supply at p=.7) - pointed to a p_edge-driven down-state supply problem possibly affecting single pairs too, not just MPC.
+
+**A2g** (sampler provenance / supply / conditioning, offline): H1 (i.i.d. sampler flicker matches theory) **FAIL** on stored A2c traces (84/300, 28% vs 90% required) - but note A2f-3 itself used the chain/patched-v3 sampler, not i.i.d.. H2 (down-state supply collapses with p_edge/N, single pair) **NOT SUPPORTED** at the frozen threshold (72.7% vs 80% required) and one op was lost to an interruption (809/810 complete). H3 (`uk` + per-edge memory chain sampler works) **PASS** (90/90 ops, 30/30 cells). A2g-4 (up/down conditioning of background edges) found "distortion" in 40/40 strata - **flagged as likely a biased statistic** (few down frames, autocorrelated chains inflate the naive mean-absolute-difference measure); a circular-shift null test was requested next (A2h) but not yet run as of this summary.
+
+**A3** (instrumentation in `graph-run.cc`): initial run **FAILED** (T1: AODV showed 2 unexplained forward events at the source node; T4: compared against the wrong golden, Phase 1's pre-Phase-2-fix reference, which can never match post-fix code).
+
+**A3b** (fix, 4 variants): diagnosed the AODV T1 issue as **source-local packets counted during AODV route discovery** (loopback/deferred path) - fixed by amending the forwarded-packet predicate to exclude src==own-address or dst==own-address. Replaced the T4 golden with the Phase 7 B0 legacy output. Both now **PASS**. A3 is accepted as passed under the amended A3b gates; the original FAIL stays on record. Alpha spend after A3b: **12/300**.
+
+**A4** (static, all-links-up calibration) - **currently stuck in diagnostic loop before A4.1**:
+- A4.0 (9 variants: 6 pilot + 3 validation) **FAILED its gate**: V1 (forwarding conservation) failed with an opaque error on all 3 protocols; 3 of the 6 pilots crashed (exit 250 = SIGABRT).
+- A4.0b (offline diagnosis, 0 variants): the V1 failure was an **analyzer bug** (flow-assignment by sequence number, not identity) - re-validated with exact timestamp matching, V1 now **PASSES** for all 3 protocols. The 3 crashes: OLSR crashes in `RecordControlTx`/`MessageHeader::Deserialize` (A3 telemetry parser misparsing an OLSR control aggregate as a single message, likely); AODV crashes with a negative-delay assertion in `ScheduleRreqRetry` (cause unknown, not reproduced). DSDV at phi=10% **saturates** (background PDR 0.024) -> triggers the per-node-load fallback for 4.2 per the frozen rule.
+- A4.0c (offline, 0 variants): confirmed the convergence detector is **not measuring convergence** - it equals the Rx time of the run's last probe packet (because the 0.99/10s window needs ~61 consecutive packets with zero loss, so one late random MAC loss resets it to the run's tail). Proposed replacement candidates (C95/C90) are the same mechanism at a looser threshold, not fixed.
+- A4.0d (just authorized by the user; **currently running**): (1) rejects C95, requires a genuine **gap-based readiness candidate** (longest post-event delivery gap <= G, G ~1.0 s) instead; (2) characterizes a DSDV N=42 loss cluster near 196 s (candidate late-outage event, possibly related to the Phase 6D DSDV anomaly); (3) patches the OLSR parser on an isolated copy with an explicit `control_unparsed_*` counter (never silently drops packets) and applies it to the protected source only after unit tests pass, with a stored diff/hashes; (4) re-projects 4.1+4.2+4.3 runtime under both the 1.25x and the prereg's 2.5x frame multiplier, across worker counts k in {3,4,5}; (5) spends exactly 2 authorized variants: a regression rerun (A4.0B OLSR N=42 on the patched build) then, only if that passes, one OLSR N=162 1% canary.
+- **Parallelism decision made this conversation**: 8 logical cores, 32 GB RAM / 8 GB swap. Memory is not binding (observed peak RSS <= ~325 MB). Recommended worker cap: **4 workers (5 if `lscpu` confirms 8 physical cores)**, with a guard to not launch jobs if free RAM < 8 GB or swap is in use, and per-size timeouts (e.g. 7,200 s at N=162) fixed before 4.1 starts. This was added to the running A4.0d prompt as a new Step 0 (environment check) and edits to Step 3 (projection) and the Rules block.
+
+## Current Alpha budget
+21/300 variants spent before A4.0d (12 from A3/A3b + 9 from A4.0). A4.0d will spend at most 2 more (-> 23/300 if both run). A4.1-A4.3 are not started. Planned full A4 design was ~261 variants (6+45+135+72, originally 258, A4.0 raised it to 261); projected serial runtime for 4.1+4.2+4.3 is roughly 15-32 h depending on which frame-count multiplier is correct (open question in A4.0d Step 3), i.e. may or may not clear the 24 h stop rule even before considering k workers.
+
+## Open items for the next conversation
+1. **A4.0d results** are pending: adopt/reject the gap-based readiness candidate; go/no-go on applying the OLSR parser patch; canary result and what it implies for OLSR at N=92/162; confirmed worker count and per-size timeouts; resolved 4.1+4.2+4.3 projection vs 24 h.
+2. **7B/7C status must be re-confirmed in `alpha/gates.md`** before any further Alpha work that assumes the no-interpolation channel or a static-route reference.
+3. **A2h (circular-shift null for A2g-4 "distortion", chain-sampler feasibility at N=162, missing A2g-2 cell)** was designed but, per the available record, not yet executed - needed before Beta sampler/parameter decisions are finalized.
+4. **DSDV disposition**: still excluded pending a causal, propagation-model-matched study (Phase 6D); the A4.0c/A4.0d N=42 loss cluster near 196 s may be a new, cheaper lead - worth checking against the 15 s Phase 6D outage once A4.0d's characterization lands.
+5. **Load unit for Beta/4.2**: per-node fallback is already triggered (DSDV phi=10% saturation under the frozen rule); per-pair vs per-node for Beta more broadly is still an open recommendation to be made from A4 results, including measured flows-per-node from 4.0 Part A.
+6. **MPC / multi-path**: recorded as "single path, plus shared-source pairs as an exception"; a fail-closed fix exists as a proposal only, not implemented, not re-tested since the p_edge-correlated A2f-4 finding.
+7. **Edge-Markovian fallback**: kept strictly separate (`alpha/EM/`), failed its own frozen marginal/duration tolerances at L=8; all effort continues to prioritize making YaDyGaGa (`uk` + per-edge memory sampler) sufficient so EM is not needed.
+
+## Known methodological watch-list (flagged, not yet all resolved)
+- Several "diversity" and "decoupling" gates in A2 passed partly **by construction** of the chosen grid/selection rule (A2b's greedy max-min selection, A2f-3's grid of shortest/midpoint/longest feasible up-run per life) - treat their PASS labels as descriptive, not as strong evidence, when reasoning about Beta design.
+- Time-respecting reachability (allows waiting at nodes) is **not** a valid oracle for OLSR/AODV/DSDV, which cannot buffer across outages; the adopted oracle is **per-frame usable S-R uptime** (instantaneous path, no waiting).
+- At p_edge 0.5 (used in A2c/A2f-3), down-state (S-R disconnected) frame supply may be marginal or starved, especially at higher p_edge/N/degree; this has not been fully separated into cause (supply vs. correlation vs. assembly fallback) for the single-pair case.
+- A2g-4's "40/40 strata show distortion" claim is suspected to be mostly a biased-statistic artifact (few down frames, autocorrelated chains) rather than real up/down conditioning of background edges; unresolved.

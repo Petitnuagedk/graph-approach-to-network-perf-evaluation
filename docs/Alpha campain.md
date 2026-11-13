@@ -1,5 +1,13 @@
 # Phase Alpha: YADYGAGA capability study and static calibration on large graphs (no dynamics campaign)
 
+## Operability and baseline method (recorded 2026-10-13)
+
+The A4.3 operability procedure uses a fixed per-N run length, a phi sweep, and the per-cell pass criterion of probe PDR ≥0.99 plus background median per-flow PDR ≥0.95 in the fixed measurement window. A flagged shortfall is convergence-affected; an unflagged shortfall is indeterminate; control-amplified is descriptive and requires the per-type control table. A cell's operable phi is the highest tested phi that passes without a readiness flag.
+
+The A4.4 static baseline defines phi separately by N: 5% at N=42, 1.5% at N=92, and 0.65% at N=162; warm-up is 120/180/320 s, post-warm-up simulation time is 300 s, and the measurement window is `[warm-up,warm-up+300]`. These phi values are a user decision matched on the forwarded-load proxy only, using flows × geodesic mean shortest path / N as an approximate proxy for all families. They are not matched on flows per node.
+
+Any future static-baseline extension in topology, size, or phi uses the same window, interpolation setting, and attribution rules and must be registered as a new preregistration with its own budget line. A4.3 is closed as operability evidence at N=42 under T=120 s, with results descriptive only; its N=92 and N=162 runs are out of scope.
+
 ## Research question for the whole Alpha-Delta series
 How do topology and link dynamics impact routing-algorithm (RA) performance and network behavior?
 Alpha does not answer it. Alpha establishes (i) what the YADYGAGA generator can do at scale, (ii) which family/size/protocol combinations are measurable at all, and (iii) the load and warm-up values that later phases will use.
@@ -73,3 +81,7 @@ Gate A4: every (family, N, protocol) cell has an explicit status (pass at phi / 
 
 ## Deliverables
  alpha_report.md with: A0 capability report summary and the verdict table; A1 covariate and mismatch tables; A2 audit results; A3 test results; A4 tables (convergence, load sweep, status matrix); budget used; exact commands; SHA-256 of generated tables; list of Alpha claims that are limited by single graph realizations; and a short list of decisions needed from me: YADYGAGA versus Edge-Markovian per Beta axis, operating load per size, whether to define load as a fraction of nodes instead of pairs if 10% saturates, the retained families/protocols, and Beta's numeric cap (its counting unit is already fixed as protocol variants). No Beta work, no dynamic campaign, no ranking.
+
+## A4.5 static baseline (recorded 2026-10-13)
+
+A4.5 is introduced as the true static reference for the harness and operability results: all links are up for the whole run, rather than replayed from time-varying frames. Its scope is AODV and OLSR only, at N=42, 92, and 162, with the A4.4 settings of phi 5%, 1.5%, and 0.65%, warm-up 120, 180, and 320 s, and post-warm-up simulation time 300 s. The exact all-up definition, seeds, and frame construction are intentionally left to the A4.5 preregistration. The A4.5 preregistration is pending; this record authorizes no run.

@@ -108,6 +108,49 @@ SHA-256 of generated data artifacts:
 | `results/patched_a0_gate_summary.json` | `52799d732db7bd8974803e18e8168dc94b24283cabedbeac51db05e99d41b14e` |
 | `results/remaining_capabilities.json` | `061e06d4b93d8468554f903aa5fb8b3e711c6d11cb9d128a0fb4c8fdbaccb913` |
 
+## Supplemental offline checks (2026-10-09)
+
+These checks were separately preregistered in [follow-up_prereg.md](followup_prereg.md), SHA-256 `4716808542782030d956ea832ffa68fd3d967aa6c7c68da3bbdda0f832246cf7`, before the runs. No ns-3 or protocol variants were used.
+
+### Stability and persistency on assembled patched traces
+
+N=92, 120 frames, life .5, ten seeds (42–51), 500 candidate frames per seed. Stability and persistency were crossed over stability `{0,.2,.4,.6,.8,1}` and persistency `{0,.25,.5,.75,1}`. Scheduled Boolean statistics were independent of persistency for every seed/stability pair. Measured scheduled and assembled S–R results matched:
+
+| Stability | Mean transitions (range) | Mean up-run frames |
+|---:|---:|---:|
+| 0.0 | 118.5 (118–119) | 1.000 |
+| 0.2 | 94.8 (94–96) | 1.250 |
+| 0.4 | 70.8 (70–72) | 1.667 |
+| 0.6 | 48.8 (48–50) | 2.400 |
+| 0.8 | 24.8 (24–26) | 4.615 |
+| 1.0 | 1.5 (1–2) | 60.000 |
+
+At stability .8, increasing persistency from 0 to 1 raised adjacent path-ID retention from 0 to 1, reduced mean path-ID changes within up-runs from 47.0 to 0, and reduced mean observed route switches within contiguous up from 46.8 to 0. S–R transitions stayed 24.8 and mean up-run stayed 4.615 across persistency levels. Thus stability affects Boolean run structure; persistency affects path/route identity without altering Boolean connectivity uptime. Detailed 300-row data: [stability_persistency_traces.csv](results/stability_persistency_traces.csv), SHA-256 `5b510baad892e8c730a04449239243fcb6158c37e837bb6cda5b366db7127f56`.
+
+### Expanded 50-seed life-diversity sweep
+
+Life values .1/.3/.5/.7/.9 were each measured over seeds 42–91 (50 each), N=92, 120 frames, stability=1.0 and persistency=.9. Stability was held fixed at 1.0 so every requested life quota/run combination, including .9 life, was feasible; this is an expanded characterization, not the frozen A0 stability=.8 diversity gate.
+
+| Life | Unique S–R timelines / 50 | Mean pairwise Hamming | Realized uptime |
+|---:|---:|---:|---:|
+| .1 | 22 | .16385 | .100 |
+| .3 | 22 | .41182 | .300 |
+| .5 | 21 | .47139 | .500 |
+| .7 | 20 | .28505 | .700 |
+| .9 | 12 | .09287 | .900 |
+
+The 50-seed result at the frozen life=.5 setting exceeds A0's frozen minimum of five unique strings and Hamming >.10. Diversity decreases as life approaches .9; at .9, 12 strings are distinct, but mean Hamming .09287 is below .10 **if** the frozen Hamming threshold is extended to that supplementary cell. The preregistered A0 threshold itself applies only to life=.5. Per-seed data: [life_diversity_50seeds.csv](results/life_diversity_50seeds.csv), SHA-256 `e5add47f12dbe260c382eea7d2b04bd86ab8e539dcdf82afd409cb0a14b40254`.
+
+### N=162 pool sizes
+
+Frequency-4 geodesic / N=162, diameter pair `Node_0`–`Node_51`, 500 candidates per seed, seeds 42–91: up pool 452–474 (mean 461.44); route groups 448–470 (mean 458.58); down pool 26–48 (mean 38.56). There were zero empty pools and zero pools with fewer than five frames; max sampling time was .416 s. Full per-seed data: [n162_pool_sizes_50seeds.csv](results/n162_pool_sizes_50seeds.csv), SHA-256 `ef54a3ee1a36393d89677a326642e77234b5d2eec34dc5408d13c1d4489574f8`.
+
+### Comparison with dirty timeline source
+
+**Yes, the dirty source changes block placement code rewritten by the patch.** Relative to the pinned clean source, it adds `up_blocks = min(up_blocks, down_count + 1)` and changes the block splitter to clamp `parts` to `total`; both edits are directly inside the target construction. The A0-R patch replaces that method with seeded valid compositions, preserves the unclipped stability-derived run target, and raises `ValueError` for mathematically infeasible quota/run combinations rather than silently capping runs. The current dirty file hash is `49506167cf764705e4e3fc7d3944d070dc2602c69b8ae250fcf3fc6e851591f5`; it currently matches its later repository HEAD blob (no current diff for that path), although it differs from A0's pinned source. See the focused [dirty timeline comparison](dirty_timeline_comparison.md), SHA-256 `447a098c8a8dd7cbef101b7bc3774b338dd6da18bdd8d477e56f4ef657495964`; no dirty checkout file was edited or imported.
+
+Complete unified diff against the current dirty timeline file: [timeline_dirty_vs_a0r.patch](results/timeline_dirty_vs_a0r.patch), SHA-256 `66b8d83d491fd57ce94a505596e8a6e89f896831eadf303b1cd04573eb0681b9`.
+
 ## Decision boundary
 
 A0-R establishes that the diversity failure was remediable in a derived copy without changing A0 thresholds, and that the patched copy passes the frozen A0 gates. **This does not retroactively pass A0 or authorize upstream replacement.** User decision requested: whether to accept/review the exact patch for upstreaming or retain it as an isolated experiment. A1 and Beta remain blocked until explicitly authorized; protocol-variant count remains zero.

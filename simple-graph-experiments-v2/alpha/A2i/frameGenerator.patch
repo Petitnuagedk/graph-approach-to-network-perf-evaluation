@@ -1,0 +1,45 @@
+--- a/yadygaga/frameGenerator.py
++++ b/yadygaga/frameGenerator.py
+@@ -163,3 +163,42 @@
+     def clear_frames(self) -> None:
+         self.path_up_frames.clear()
+         self.path_down_frames.clear()
++
++    def generateMPCFramesForTimeline(
++        self,
++        limited_G: nx.Graph,
++        pairs: List[Tuple[str, str]],
++        requested_statuses: List[Tuple[bool, ...]],
++        p_edge: float = 0.5,
++        seed: int = 0,
++        trial_ladder: Tuple[int, ...] = (3000, 30000, 300000),
++    ) -> Dict:
++        """Generate an exact-status-sufficient pool with an explicit cap.
++
++        The same seeded prefix is regenerated at each registered budget.  The
++        method returns only when every requested status has at least as many
++        candidates as its timeline demand; otherwise it raises explicitly at
++        the final budget instead of allowing a status-changing fallback.
++        """
++        demands: Dict[Tuple[bool, ...], int] = {}
++        for status in requested_statuses:
++            demands[tuple(status)] = demands.get(tuple(status), 0) + 1
++        if not trial_ladder or any(b <= 0 for b in trial_ladder):
++            raise ValueError("trial_ladder must contain positive budgets")
++        previous = 0
++        for budget in trial_ladder:
++            if budget <= previous:
++                raise ValueError("trial_ladder must be strictly increasing")
++            pool = self.generateMPCFrames(
++                limited_G, pairs, trials=budget, p_edge=p_edge, seed=seed
++            )
++            counts = {tuple(k): len(v) for k, v in pool["cases"].items()}
++            if all(counts.get(status, 0) >= demand for status, demand in demands.items()):
++                pool["adaptive_budget"] = budget
++                pool["adaptive_demands"] = demands
++                return pool
++            previous = budget
++        raise RuntimeError(
++            f"exact status demand not met by cap {trial_ladder[-1]}: "
++            f"demands={demands!r} counts={counts!r}"
++        )

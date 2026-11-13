@@ -1,0 +1,198 @@
+--- a/scratch/graph-run.cc
++++ b/scratch/graph-run.cc
+@@ -365,6 +365,9 @@
+ };
+ 
+ static bool g_a3Instrumentation = false;
++static bool g_a3bForwardLogEnabled = false;
++static std::ofstream g_a3bForwardLog;
++static std::ofstream g_a3bControlLog;
+ static double g_flowFraction = 0.0;
+ static uint64_t g_flowSeed = 9001;
+ static std::vector<FlowPair> g_activeFlows;
+@@ -713,6 +716,17 @@
+ }
+ 
+ static void
++RecordA3bControlEvent(const char* direction, Ptr<const Packet> packet, uint32_t nodeId)
++{
++    if (!g_a3bForwardLogEnabled || g_activeRouting != "aodv" || !g_a3bControlLog.is_open()) return;
++    const std::string kind = ControlMessageKind(packet);
++    if (kind != "aodv_rreq" && kind != "aodv_rrep" && kind != "aodv_rerr") return;
++    g_a3bControlLog << std::fixed << std::setprecision(9) << Simulator::Now().GetSeconds()
++                    << ',' << direction << ',' << nodeId << ',' << kind << ','
++                    << packet->GetUid() << '\n';
++}
++
++static void
+ RecordAppRx(Ptr<const Packet> packet, Ptr<Ipv4> localIpv4, uint32_t iface, RunTracker& t)
+ {
+     Ptr<Packet> p = packet->Copy();
+@@ -912,7 +926,9 @@
+     if (!IsAppPacket(packet)) {
+         ++g_traceRoutingTx;
+         const Ptr<Node> node = ipv4 ? ipv4->GetObject<Node>() : nullptr;
+-        RecordControlTx(packet, node ? node->GetId() : std::numeric_limits<uint32_t>::max());
++        const uint32_t nodeId = node ? node->GetId() : std::numeric_limits<uint32_t>::max();
++        RecordControlTx(packet, nodeId);
++        RecordA3bControlEvent("tx", packet, nodeId);
+     }
+ }
+ 
+@@ -928,17 +944,73 @@
+            (udp.GetDestinationPort() == APP_PORT || udp.GetSourcePort() == APP_PORT);
+ }
+ 
++static bool
++IsIpv4AddressAssignedToNode(uint32_t nodeId, Ipv4Address address)
++{
++    if (nodeId >= g_replayNodes.GetN()) return false;
++    Ptr<Ipv4> ipv4 = g_replayNodes.Get(nodeId)->GetObject<Ipv4>();
++    if (!ipv4) return false;
++    for (uint32_t interface = 0; interface < ipv4->GetNInterfaces(); ++interface) {
++        for (uint32_t addressIndex = 0; addressIndex < ipv4->GetNAddresses(interface); ++addressIndex) {
++            const Ipv4Address local = ipv4->GetAddress(interface, addressIndex).GetLocal();
++            if (!local.IsAny() && local == address) return true;
++        }
++    }
++    return false;
++}
++
+ static void
+ TraceIpForward(uint32_t nodeId, const Ipv4Header& header, Ptr<const Packet> packet, uint32_t)
+ {
+-    if (g_a3Instrumentation && IsAppIpv4Payload(header, packet)) ++g_nodeForwardedData[nodeId];
++    if (!g_a3Instrumentation || !IsAppIpv4Payload(header, packet)) return;
++
++    const bool sourceIsLocal = IsIpv4AddressAssignedToNode(nodeId, header.GetSource());
++    const bool destinationIsLocal = IsIpv4AddressAssignedToNode(nodeId, header.GetDestination());
++    const bool countsAsForward = !sourceIsLocal && !destinationIsLocal;
++    Ptr<Packet> payload = packet->Copy();
++    UdpHeader udp;
++    uint16_t sourcePort = 0;
++    uint16_t destinationPort = 0;
++    bool hasUdpHeader = payload->PeekHeader(udp) != 0;
++    bool hasSequence = false;
++    uint32_t sequence = 0;
++    double appTimestamp = std::numeric_limits<double>::quiet_NaN();
++    if (hasUdpHeader) {
++        sourcePort = udp.GetSourcePort();
++        destinationPort = udp.GetDestinationPort();
++        payload->RemoveHeader(udp);
++        SeqTsHeader seqTs;
++        if (payload->GetSize() >= seqTs.GetSerializedSize() && payload->PeekHeader(seqTs) != 0) {
++            payload->RemoveHeader(seqTs);
++            hasSequence = true;
++            sequence = seqTs.GetSeq();
++            appTimestamp = seqTs.GetTs().GetSeconds();
++        }
++    }
++
++    if (g_a3bForwardLogEnabled && g_a3bForwardLog.is_open()) {
++        g_a3bForwardLog << std::fixed << std::setprecision(9) << Simulator::Now().GetSeconds()
++                        << ',' << nodeId << ',' << header.GetSource() << ',' << header.GetDestination()
++                        << ',' << sourcePort << ',' << destinationPort << ','
++                        << (hasSequence ? std::to_string(sequence) : "") << ',';
++        if (hasSequence) g_a3bForwardLog << appTimestamp;
++        g_a3bForwardLog << ',' << packet->GetUid() << ',' << (sourceIsLocal ? 1 : 0)
++                        << ',' << (destinationIsLocal ? 1 : 0) << ','
++                        << (countsAsForward ? 1 : 0) << '\n';
++    }
++    if (countsAsForward) ++g_nodeForwardedData[nodeId];
+ }
+ 
+ void
+ TraceIpRxCb(Ptr<const Packet> packet, Ptr<Ipv4> ipv4, uint32_t iface)
+ {
+     ++g_traceRxCb;
+-    if (!IsAppPacket(packet)) ++g_traceRoutingRx;
++    if (!IsAppPacket(packet)) {
++        ++g_traceRoutingRx;
++        const Ptr<Node> node = ipv4 ? ipv4->GetObject<Node>() : nullptr;
++        RecordA3bControlEvent("rx", packet,
++                              node ? node->GetId() : std::numeric_limits<uint32_t>::max());
++    }
+     RecordAppRx(packet, ipv4, iface, g_traceTracker);
+ }
+ 
+@@ -1232,6 +1304,20 @@
+     g_nodePhyRxClasses.clear();
+     g_nodeByMacAddress.clear();
+     g_activeRouting = routing;
++    if (g_a3bForwardLog.is_open()) g_a3bForwardLog.close();
++    if (g_a3bControlLog.is_open()) g_a3bControlLog.close();
++    if (g_a3bForwardLogEnabled) {
++        g_a3bForwardLog.open(g_outDir + "/forward_events_" + routing + ".csv",
++                             std::ios::out | std::ios::trunc);
++        g_a3bControlLog.open(g_outDir + "/control_events_" + routing + ".csv",
++                             std::ios::out | std::ios::trunc);
++        NS_ABORT_MSG_UNLESS(g_a3bForwardLog.is_open() && g_a3bControlLog.is_open(),
++                            "Could not open A3b diagnostic event logs");
++        g_a3bForwardLog << "time_s,node_id,source,destination,source_port,destination_port,"
++                           "sequence,app_timestamp_s,packet_uid,source_is_local,"
++                           "destination_is_local,counts_as_forward\n";
++        g_a3bControlLog << "time_s,direction,node_id,message_type,packet_uid\n";
++    }
+     g_controlPackets.clear();
+     g_controlBytes.clear();
+     g_staticRoutes.clear();
+@@ -1570,6 +1656,14 @@
+            << g_txPowerDbm - g_rxSensitivityDbm << '\n';
+     }
+ 
++    if (g_a3bForwardLog.is_open()) {
++        g_a3bForwardLog.flush();
++        g_a3bForwardLog.close();
++    }
++    if (g_a3bControlLog.is_open()) {
++        g_a3bControlLog.flush();
++        g_a3bControlLog.close();
++    }
+     Simulator::Destroy();
+     return p;
+ }
+@@ -1831,6 +1925,7 @@
+     std::string flowsArg       = "";     // explicit flows "SrcLabel:DstLabel[,...]"; overrides numFlows
+     bool        a3Instrumentation = false;
+     bool        a3SelfTest      = false;
++    bool        a3bForwardLog   = false;
+     double      flowFraction   = 0.0;
+     uint32_t    flowSeed       = 9001;
+     uint32_t    seed           = 42;
+@@ -1858,6 +1953,7 @@
+                                    "(node labels from the CSV header); overrides numFlows", flowsArg);
+     cmd.AddValue("instrumentation", "Enable opt-in A3 flow and per-node diagnostics", a3Instrumentation);
+     cmd.AddValue("a3SelfTest",     "Run offline A3 flow-selection/convergence self-tests only", a3SelfTest);
++    cmd.AddValue("a3bForwardLog",  "Write opt-in A3b packet and AODV control diagnostic logs", a3bForwardLog);
+     cmd.AddValue("flowFraction",   "Background unordered-pair fraction for A3 (requires instrumentation)", flowFraction);
+     cmd.AddValue("flowSeed",       "Independent A3 flow-selection seed", flowSeed);
+     cmd.AddValue("seed",           "RNG seed (same seed -> same flows and ns-3 streams)", seed);
+@@ -1879,6 +1975,7 @@
+     cmd.Parse(argc, argv);
+     g_outDir = outDir;
+     g_a3Instrumentation = a3Instrumentation;
++    g_a3bForwardLogEnabled = a3bForwardLog;
+     g_flowFraction = flowFraction;
+     g_flowSeed = flowSeed;
+ 
+@@ -1902,6 +1999,10 @@
+         std::cerr << "--flowFraction requires --instrumentation=true\n";
+         return 1;
+     }
++    if (a3bForwardLog && !a3Instrumentation) {
++        std::cerr << "--a3bForwardLog requires --instrumentation=true\n";
++        return 1;
++    }
+     if (a3Instrumentation && flowsArg.empty()) {
+         std::cerr << "A3 instrumentation requires exactly one explicit --flows probe pair\n";
+         return 1;
+@@ -2068,7 +2169,8 @@
+         if (g_a3Instrumentation) {
+             config << ",\n  \"a3_instrumentation\": true,\n"
+                    << "  \"flow_fraction\": " << g_flowFraction << ",\n"
+-                   << "  \"flow_seed\": " << g_flowSeed << "\n";
++                     << "  \"flow_seed\": " << g_flowSeed << ",\n"
++                     << "  \"a3b_forward_log\": " << (g_a3bForwardLogEnabled ? "true" : "false") << "\n";
+         } else {
+             config << "\n";
+         }

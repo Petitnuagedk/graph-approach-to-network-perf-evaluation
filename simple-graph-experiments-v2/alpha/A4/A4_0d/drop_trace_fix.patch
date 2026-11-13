@@ -1,0 +1,88 @@
+--- a/graph-run.patched.cc
++++ b/graph-run.patched.cc
+@@ -1039,20 +1039,35 @@
+     RecordAppRx(packet, ipv4, iface, g_traceTracker);
+ }
+ 
++static bool
++IsApplicationUdpRouteDrop(const Ipv4Header& ipHeader,
++                           Ptr<const Packet> packet,
++                           Ipv4L3Protocol::DropReason reason)
++{
++    // Ipv4L3Protocol's Drop trace supplies the IPv4 payload, not a serialized
++    // IPv4 packet. Fragment-timeout callbacks may supply only a partial payload.
++    // Only no-route and route-error counters need application-port attribution.
++    if ((reason != Ipv4L3Protocol::DROP_NO_ROUTE &&
++         reason != Ipv4L3Protocol::DROP_ROUTE_ERROR) ||
++        ipHeader.GetProtocol() != 17 || !packet)
++    {
++        return false;
++    }
++
++    UdpHeader udp;
++    if (packet->GetSize() < udp.GetSerializedSize())
++    {
++        return false;
++    }
++    return packet->PeekHeader(udp) != 0 && udp.GetDestinationPort() == APP_PORT;
++}
++
+ void
+ TraceIpDropCb(const Ipv4Header& ipHeader, Ptr<const Packet> packet,
+               Ipv4L3Protocol::DropReason reason,
+               Ptr<Ipv4>, uint32_t)
+ {
+-    bool appPacket = false;
+-    if (ipHeader.GetProtocol() == 17) {
+-        Ptr<Packet> copy = packet->Copy();
+-        Ipv4Header packetIp;
+-        if (copy->PeekHeader(packetIp) && packetIp.GetProtocol() == 17)
+-            copy->RemoveHeader(packetIp);
+-        UdpHeader udp;
+-        appPacket = copy->PeekHeader(udp) && udp.GetDestinationPort() == APP_PORT;
+-    }
++    const bool appPacket = IsApplicationUdpRouteDrop(ipHeader, packet, reason);
+     if (reason == Ipv4L3Protocol::DROP_NO_ROUTE) {
+@@ -1901,17 +1916,44 @@
+                                  delayed.rxTimes.front() == 15.0 && delayedConvergence == 24.0 &&
+                                  never.rxTimes.front() == 0.0 && std::isnan(neverConvergence);
+ 
++    Ipv4Header udpIp;
++    udpIp.SetProtocol(17);
++    Ipv4Header tcpIp;
++    tcpIp.SetProtocol(6);
++    auto makeUdpPayload = [](uint16_t destinationPort) {
++        Ptr<Packet> packet = Create<Packet>(4);
++        UdpHeader udp;
++        udp.SetSourcePort(12345);
++        udp.SetDestinationPort(destinationPort);
++        packet->AddHeader(udp);
++        return packet;
++    };
++    const auto appPayload = makeUdpPayload(APP_PORT);
++    const auto otherUdpPayload = makeUdpPayload(9001);
++    const auto shortPayload = Create<Packet>(7);
++    const auto partialFragmentPayload = Create<Packet>(20);
++    const bool dropClassifierPass =
++        IsApplicationUdpRouteDrop(udpIp, appPayload, Ipv4L3Protocol::DROP_NO_ROUTE) &&
++        IsApplicationUdpRouteDrop(udpIp, appPayload, Ipv4L3Protocol::DROP_ROUTE_ERROR) &&
++        !IsApplicationUdpRouteDrop(udpIp, otherUdpPayload, Ipv4L3Protocol::DROP_NO_ROUTE) &&
++        !IsApplicationUdpRouteDrop(tcpIp, appPayload, Ipv4L3Protocol::DROP_NO_ROUTE) &&
++        !IsApplicationUdpRouteDrop(udpIp, shortPayload, Ipv4L3Protocol::DROP_NO_ROUTE) &&
++        !IsApplicationUdpRouteDrop(udpIp, partialFragmentPayload,
++                                   Ipv4L3Protocol::DROP_FRAGMENT_TIMEOUT);
++
+     std::ofstream out(g_outDir + "/a3_selftest.json");
+     out << "{\n  \"flow_selection_pass\": " << (selectionPass ? "true" : "false")
+         << ",\n  \"reverse_direction_observed\": " << (sawReverseDirection ? "true" : "false")
+         << ",\n  \"probe_convergence_pass\": " << (convergencePass ? "true" : "false")
++        << ",\n  \"ip_drop_classifier_pass\": " << (dropClassifierPass ? "true" : "false")
+         << ",\n  \"immediate_convergence_s\": " << immediateConvergence
+@@
+     std::cout << "A3 helper self-tests: flow_selection=" << (selectionPass ? "PASS" : "FAIL")
+-              << ", convergence=" << (convergencePass ? "PASS" : "FAIL") << "\n";
+-    return selectionPass && sawReverseDirection && convergencePass ? 0 : 1;
++              << ", convergence=" << (convergencePass ? "PASS" : "FAIL")
++              << ", ip_drop_classifier=" << (dropClassifierPass ? "PASS" : "FAIL") << "\n";
++    return selectionPass && sawReverseDirection && convergencePass && dropClassifierPass ? 0 : 1;
+ }

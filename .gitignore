@@ -1,0 +1,37 @@
+# Local Python environments and generated interpreter files
+.venv/
+__pycache__/
+*.py[cod]
+
+# Raw experiment outputs and replay data
+**/runs/
+**/ns3-results/
+**/dynamic_frames/
+**/frames/
+**/results/
+**/results/**
+**/nodes.txt
+**/routes*.txt
+**/run_args.txt
+*.csv
+*.json
+*.sha256
+*.txt
+*.log
+*.gz
+*.jsonl
+*.trace
+*.pcap
+
+# Local editor and tool state
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.vscode/
+
+# Vendored copies that contain their own Git repositories
+simple-graph-experiments-v2/alpha/A0R2/YaDyGaGa/
+simple-graph-experiments-v2/alpha/A2i/src/
+
+# Keep source code, Markdown/preregistration documents, and plot images/PDFs
+# tracked; generated result files above remain local only.

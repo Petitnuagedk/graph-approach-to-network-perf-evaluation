@@ -1,0 +1,138 @@
+--- graph-run.pre_patch.cc
++++ graph-run.patched.cc
+@@ -366,6 +366,7 @@
+ 
+ static bool g_a3Instrumentation = false;
+ static bool g_a3bForwardLogEnabled = false;
++static bool g_emitControlUnparsedColumns = false;
+ static std::ofstream g_a3bForwardLog;
+ static std::ofstream g_a3bControlLog;
+ static double g_flowFraction = 0.0;
+@@ -665,24 +666,47 @@
+ {
+     Ptr<Packet> payload = packet->Copy();
+     Ipv4Header ip;
+-    if (!payload->PeekHeader(ip)) return g_activeRouting + "_other";
++    if (payload->GetSize() < ip.GetSerializedSize() || !payload->PeekHeader(ip))
++        return g_activeRouting == "olsr" ? "olsr_unparsed" : g_activeRouting + "_other";
+     payload->RemoveHeader(ip);
+     if (ip.GetProtocol() != 17) return g_activeRouting + "_other";
+     UdpHeader udp;
+-    if (!payload->PeekHeader(udp)) return g_activeRouting + "_other";
+-    payload->RemoveHeader(udp);
++    if (payload->GetSize() < udp.GetSerializedSize() || !payload->PeekHeader(udp))
++        return g_activeRouting == "olsr" ? "olsr_unparsed" : g_activeRouting + "_other";
+     if (g_activeRouting == "olsr") {
+-        olsr::PacketHeader packetHeader;
+-        olsr::MessageHeader messageHeader;
+-        if (payload->RemoveHeader(packetHeader) && payload->PeekHeader(messageHeader)) {
+-            switch (messageHeader.GetMessageType()) {
+-            case olsr::MessageHeader::HELLO_MESSAGE: return "olsr_hello";
+-            case olsr::MessageHeader::TC_MESSAGE: return "olsr_tc";
+-            case olsr::MessageHeader::MID_MESSAGE: return "olsr_mid";
+-            case olsr::MessageHeader::HNA_MESSAGE: return "olsr_hna";
+-            }
++        if (udp.GetSourcePort() != 698 || udp.GetDestinationPort() != 698) return "olsr_other";
++        payload->RemoveHeader(udp);
++        const uint32_t size = payload->GetSize();
++        if (size < 16) return "olsr_unparsed";
++        std::vector<uint8_t> bytes(size);
++        if (payload->CopyData(bytes.data(), size) != size) return "olsr_unparsed";
++        auto readU16 = [&bytes](uint32_t offset) -> uint16_t {
++            return static_cast<uint16_t>((static_cast<uint16_t>(bytes[offset]) << 8) |
++                                         static_cast<uint16_t>(bytes[offset + 1]));
++        };
++        const uint32_t packetLength = readU16(0);
++        if (packetLength != size || packetLength < 16) return "olsr_unparsed";
++        uint32_t offset = 4;
++        uint8_t firstType = 0;
++        while (offset < packetLength) {
++            if (packetLength - offset < 12) return "olsr_unparsed";
++            const uint8_t messageType = bytes[offset];
++            const uint32_t messageLength = readU16(offset + 2);
++            if (messageType < 1 || messageType > 4 || messageLength < 12 ||
++                messageLength > packetLength - offset) return "olsr_unparsed";
++            if (offset == 4) firstType = messageType;
++            offset += messageLength;
++        }
++        if (offset != packetLength) return "olsr_unparsed";
++        switch (firstType) {
++        case olsr::MessageHeader::HELLO_MESSAGE: return "olsr_hello";
++        case olsr::MessageHeader::TC_MESSAGE: return "olsr_tc";
++        case olsr::MessageHeader::MID_MESSAGE: return "olsr_mid";
++        case olsr::MessageHeader::HNA_MESSAGE: return "olsr_hna";
+         }
++        return "olsr_unparsed";
+     } else if (g_activeRouting == "aodv") {
++        payload->RemoveHeader(udp);
+         aodv::TypeHeader type;
+         if (payload->RemoveHeader(type)) {
+             switch (type.Get()) {
+@@ -700,6 +724,7 @@
+     } else if (g_activeRouting == "dsdv") {
+         return "dsdv_update";
+     }
++    payload->RemoveHeader(udp);
+     return g_activeRouting + "_other";
+ }
+ 
+@@ -1783,11 +1808,12 @@
+         nodes << protocol << ',' << node << ',' << metric << ',' << messageType << ','
+               << phyReason << ',' << value << '\n';
+     };
+-    const std::vector<std::string> controlKinds = {
++    std::vector<std::string> controlKinds = {
+         "olsr_hello", "olsr_tc", "olsr_mid", "olsr_hna", "olsr_other",
+         "aodv_hello", "aodv_rreq", "aodv_rrep", "aodv_rerr", "aodv_rrep_ack", "aodv_other",
+         "dsdv_update", "dsdv_other", "static_other"
+     };
++    if (g_emitControlUnparsedColumns) controlKinds.push_back("olsr_unparsed");
+     const std::vector<std::string> classes = {
+         "below_sensitivity", "collision_interference", "other_unclassified"
+     };
+@@ -1926,6 +1952,7 @@
+     bool        a3Instrumentation = false;
+     bool        a3SelfTest      = false;
+     bool        a3bForwardLog   = false;
++    bool        emitControlUnparsed = false;
+     double      flowFraction   = 0.0;
+     uint32_t    flowSeed       = 9001;
+     uint32_t    seed           = 42;
+@@ -1954,6 +1981,7 @@
+     cmd.AddValue("instrumentation", "Enable opt-in A3 flow and per-node diagnostics", a3Instrumentation);
+     cmd.AddValue("a3SelfTest",     "Run offline A3 flow-selection/convergence self-tests only", a3SelfTest);
+     cmd.AddValue("a3bForwardLog",  "Write opt-in A3b packet and AODV control diagnostic logs", a3bForwardLog);
++    cmd.AddValue("emitControlUnparsed", "Append control_unparsed_packets/bytes when true", emitControlUnparsed);
+     cmd.AddValue("flowFraction",   "Background unordered-pair fraction for A3 (requires instrumentation)", flowFraction);
+     cmd.AddValue("flowSeed",       "Independent A3 flow-selection seed", flowSeed);
+     cmd.AddValue("seed",           "RNG seed (same seed -> same flows and ns-3 streams)", seed);
+@@ -1976,6 +2004,7 @@
+     g_outDir = outDir;
+     g_a3Instrumentation = a3Instrumentation;
+     g_a3bForwardLogEnabled = a3bForwardLog;
++    g_emitControlUnparsedColumns = emitControlUnparsed;
+     g_flowFraction = flowFraction;
+     g_flowSeed = flowSeed;
+ 
+@@ -2222,6 +2251,8 @@
+     };
+     for (const auto& kind : controlKinds)
+         ofs << "," << kind << "_packets," << kind << "_bytes";
++    if (g_emitControlUnparsedColumns)
++        ofs << ",control_unparsed_packets,control_unparsed_bytes";
+     ofs << "\n";
+     for (const auto& proto : protocols) {
+         const PerfMetrics& m = metrics[proto];
+@@ -2253,6 +2284,12 @@
+             ofs << "," << (count == m.control_message_counts.end() ? 0 : count->second)
+                 << "," << (bytes == m.control_message_bytes.end() ? 0 : bytes->second);
+         }
++        if (g_emitControlUnparsedColumns) {
++            const auto count = m.control_message_counts.find("olsr_unparsed");
++            const auto bytes = m.control_message_bytes.find("olsr_unparsed");
++            ofs << "," << (count == m.control_message_counts.end() ? 0 : count->second)
++                << "," << (bytes == m.control_message_bytes.end() ? 0 : bytes->second);
++        }
+         ofs << "\n";
+     }
+     ofs.close();
